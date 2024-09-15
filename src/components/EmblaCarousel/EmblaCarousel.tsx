@@ -36,7 +36,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {slides.map((imageUrl) => (
             <div className="embla__slide" key={imageUrl}>
-              <img src="" alt={`product-img${imageUrl}`} />
+              <img src={imageUrl} alt={`product-img-${imageUrl}`} />
             </div>
           ))}
         </div>

@@ -10,12 +10,12 @@ import { getFromLocalStorage } from "./utils/localStorage";
 const PRODUCT_LIST_KEY = "PRODUCT_LIST_KEY";
 
 function App() {
-  const [productList, setProducList] = useState([]);
+  const [productList, setProductList] = useState([]);
 
   useEffect(() => {
     const result = getFromLocalStorage(PRODUCT_LIST_KEY);
     if (result) {
-      setProducList(result);
+      setProductList(result);
     }
   }, []);
 
@@ -23,7 +23,7 @@ function App() {
     <ShoppingCardContext.Provider
       value={{
         productList,
-        setProducList,
+        setProductList,
       }}
     >
       <div className="app">

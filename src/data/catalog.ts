@@ -4,6 +4,8 @@ const catalogCar: ProductCardProps[] = [
   {
     imagesUrl: [
       "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_205898030eb7491faedcaf84d8fa275d.jpg",
+      "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_a63500a323824372aff9757f5ca6975c.jpg",
+      "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_a63500a323824372aff9757f5ca6975c.jpg",
     ],
     description: "BMW X5 M50i: Potente y elegante SUV con motor V8.",
     price: 85900,
