@@ -1,25 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import NavBar from "./components/NadBar/navBar";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes/root";
+import "./App.css";
+import { Footer } from "./components/Footer/Footer";
+import { ShoppingCardContext } from "./providers/ShoppingCardContext";
+import { useEffect, useState } from "react";
+import { getFromLocalStorage } from "./utils/localStorage";
+
+const PRODUCT_LIST_KEY = "PRODUCT_LIST_KEY";
 
 function App() {
+  const [productList, setProducList] = useState([]);
+
+  useEffect(() => {
+    const result = getFromLocalStorage(PRODUCT_LIST_KEY);
+    if (result) {
+      setProducList(result);
+    }
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ShoppingCardContext.Provider
+      value={{
+        productList,
+        setProducList,
+      }}
+    >
+      <div className="app">
+        <NavBar />
+        <RouterProvider router={router} />
+        <Footer year={0} companyName={""} />
+      </div>
+    </ShoppingCardContext.Provider>
   );
 }
 

@@ -1,0 +1,57 @@
+.hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-backgroud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  border-radius: 0;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente, incluyendo el botón */
+  justify-content: center;
+  max-width: 30%;
+  padding: 2.5rem 3rem;
+  z-index: 1;
+}
+
+.headline {
+  text-align: center;
+  color: #fff;
+  font-size: 1.8rem; /* Tamaño más pequeño y elegante */
+  font-weight: 600; /* Peso de fuente reducido para una sensación más ligera */
+  padding-bottom: 0.5rem;
+  line-height: 1.3; /* Ajuste en la altura de línea para mayor legibilidad */
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Sombra de texto más ligera */
+}
+
+.cta .button-link {
+  margin-top: 0.5rem; /* Reducido el margen superior para acercar el botón al texto */
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  background-color: #292828;
+  color: white;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.cta .button-link:hover {
+  background-color: #000000;
+}

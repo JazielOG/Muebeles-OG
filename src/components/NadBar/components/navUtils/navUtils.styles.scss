@@ -1,0 +1,18 @@
+.Nav-utils {
+  display: flex;
+  align-items: center; // Alinea los elementos en el centro verticalmente
+  gap: 1rem; // Espacio uniforme entre los enlaces
+
+  a {
+    display: flex;
+    align-items: center;
+    color: #645e5e; // Color más suave para el texto
+    font-size: 1.6rem; // Tamaño de fuente ligeramente más pequeño para un aspecto más elegante
+    padding: 1rem 1.5rem; // Espaciado uniforme
+
+    &:hover {
+      color: #000; // Color de texto en el hover para mejorar la visibilidad
+      border-bottom: 2px solid #000; // Agrega una línea de resaltado debajo del enlace
+    }
+  }
+}

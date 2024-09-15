@@ -1,0 +1,44 @@
+$carouseld-item-heigh: 24rem;
+
+.carousel-item {
+  flex: 1 0 32%; // Ajuste del ancho para mejor espaciado
+  height: 10rem;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra suave
+  position: relative; // Asegura que los elementos hijos con posición absoluta se mantengan dentro
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px); // Suave animación al hacer hover
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  &-image {
+    width: 100%;
+    height: auto;
+    max-height: 18rem;
+    object-fit: cover; // Imagen manteniendo proporciones
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  &-tag {
+    position: absolute; // Asegura que el botón esté dentro del contenedor
+    bottom: 4rem; // Ajustamos la posición más alta para visibilidad
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    letter-spacing: 0.05rem;
+    font-family: "Lato", sans-serif;
+    z-index: 1; // Asegura que el botón esté visible sobre la imagen
+  }
+}
