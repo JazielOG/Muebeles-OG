@@ -26,7 +26,7 @@ const ProductCard: FC<ProductCardProps> = ({
 
       <label>{description}</label>
 
-      <div className="produc-card-footer">
+      <div className="product-card-footer">
         <p>
           <label className="product-card-price">$MXN {price}</label>
         </p>

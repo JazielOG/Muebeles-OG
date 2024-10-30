@@ -1,57 +1,66 @@
 .hero {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.5);
+  display: flex; /* Utiliza Flexbox para organizar el contenido dentro del contenedor */
+  align-items: flex-end; /* Alinea el contenido verticalmente hacia la parte inferior */
+  justify-content: flex-start; /* Alinea el contenido horizontalmente hacia la izquierda (botón y texto) */
+  height: 73vh; /* Ocupa toda la altura de la ventana */
+  width: 100%; /* Ocupa el 100% del ancho de la ventana */
+  overflow: hidden; /* Oculta cualquier contenido que exceda el área del contenedor */
+  position: relative; /* Posiciona los elementos en relación al contenedor padre, necesario para superponer elementos */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Fondo negro semitransparente, para resaltar el contenido sobre la imagen */
 }
 
 .img-backgroud {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -1;
-  border-radius: 0;
-  object-fit: cover;
-  filter: brightness(0.8);
+  position: absolute; /* Posiciona la imagen de fondo de forma fija respecto al contenedor padre */
+  top: 0; /* La imagen comienza desde el borde superior del contenedor */
+  left: 0; /* La imagen empieza desde el borde izquierdo */
+  width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+  height: 73vh; /* La imagen ocupa el 100% de la altura de la ventana */
+  object-fit: cover; /* Asegura que la imagen cubra todo el contenedor sin perder proporciones */
+  filter: brightness(
+    0.8
+  ); /* Reduce el brillo de la imagen, haciendo que el contenido frontal resalte más */
 }
 
 .cta {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centra el contenido horizontalmente, incluyendo el botón */
-  justify-content: center;
-  max-width: 30%;
-  padding: 2.5rem 3rem;
-  z-index: 1;
+  display: flex; /* Flexbox para organizar los elementos internos (texto, botones) */
+  flex-direction: column; /* Coloca los elementos en una columna, uno debajo del otro */
+  align-items: flex-start; /* Alinea el contenido (texto y botones) a la izquierda */
+  justify-content: center; /* Centra el contenido verticalmente en el contenedor */
+  max-width: 30%; /* Limita el ancho del contenido al 30% de la pantalla, para evitar que ocupe demasiado espacio */
+  padding: 3rem 4rem; /* Relleno interno (padding) para dar más espacio alrededor del contenido */
+  z-index: 1; /* Asegura que el contenido esté por encima de la imagen de fondo */
 }
 
 .headline {
-  text-align: center;
-  color: #fff;
-  font-size: 1.8rem; /* Tamaño más pequeño y elegante */
-  font-weight: 600; /* Peso de fuente reducido para una sensación más ligera */
-  padding-bottom: 0.5rem;
-  line-height: 1.3; /* Ajuste en la altura de línea para mayor legibilidad */
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6); /* Sombra de texto más ligera */
+  text-align: left; /* Alinea el texto del titular a la izquierda */
+  color: #fff; /* Color blanco para el texto, para contraste con el fondo oscuro */
+  font-size: 3rem; /* Tamaño de fuente grande para hacer que el titular destaque */
+  font-weight: 700; /* Fuente más gruesa, dándole un aspecto más sólido y profesional */
+  padding-bottom: 1rem; /* Espacio inferior entre el titular y el contenido siguiente */
+  line-height: 1.4; /* Ajusta el espacio entre las líneas del texto */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* Añade una sombra al texto para darle más profundidad y visibilidad sobre la imagen de fondo */
 }
 
 .cta .button-link {
-  margin-top: 0.5rem; /* Reducido el margen superior para acercar el botón al texto */
-  padding: 0.8rem 1.5rem;
-  font-size: 1.2rem;
-  border-radius: 50px;
-  background-color: #292828;
-  color: white;
-  transition: background-color 0.3s ease;
-  text-transform: uppercase;
+  margin-top: 1rem; /* Espacio superior entre el texto y el botón */
+  padding: 1rem 2rem; /* Tamaño del botón más grande (relleno interno para darle más espacio) */
+  font-size: 1.4rem; /* Tamaño de fuente más grande dentro del botón */
+  border-radius: 5px; /* Bordes ligeramente redondeados para un diseño moderno */
+  background-color: #333230; /* Color de fondo del botón (un tono oscuro elegante) */
+  color: white; /* Color de texto blanco para contraste */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave al cambiar el color o mover el botón al hacer hover */
+  text-transform: uppercase; /* Convierte el texto del botón a mayúsculas para mayor impacto */
+  font-weight: 600; /* Fuente más gruesa dentro del botón para hacer que el texto destaque */
 }
 
 .cta .button-link:hover {
-  background-color: #000000;
+  background-color: #1e1d1d; /* Cambia ligeramente el tono del botón al pasar el mouse por encima */
+  transform: translateX(
+    5px
+  ); /* Desplaza el botón ligeramente hacia la derecha cuando el mouse está encima */
 }

@@ -1,28 +1,41 @@
+// ButtonLink.styles.scss
 .button-link {
-  background-color: red;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  text-align: start;
   justify-content: center;
-  padding: 9px 15px;
-  border-radius: 5px;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #38393b; // Color de fondo (un azul sofisticado)
+  color: #ffffff; // Color del texto
+  font-weight: 600;
+  font-size: 1rem;
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  border: 1px solid rgb(255, 255, 255);
-  max-width: max-content;
-  transition: background-color 0.3s, color 0.3s; /* Transiciones suaves */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  &-label {
-    padding-right: 10px;
+  &:hover {
+    background-color: #0c224a; // Oscurece el color al hacer hover
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); // Aumenta la sombra al hacer hover
+    transform: translateY(-2px); // Levanta un poco el botón
   }
 
-  &.dark {
-    color: black;
-    border-color: black;
+  &:active {
+    transform: translateY(0); // Vuelve a su posición original al hacer clic
   }
-}
 
-.button-link:hover {
-  background-color: rgba(79, 76, 76, 0.715); /* Cambia el color de fondo */
-  color: rgb(255, 255, 255); /* Cambia el color del texto */
+  .button-link-label {
+    margin-right: 0.5rem;
+  }
+
+  svg {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover svg {
+    transform: translateX(
+      3px
+    ); // Mueve el ícono hacia la derecha al hacer hover
+  }
 }

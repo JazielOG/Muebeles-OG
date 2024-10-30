@@ -9,9 +9,9 @@ const NavBar = () => {
     <div className="nav-bar">
       <a href="/">
         <ImageFrame
-          src="https://cdn.icon-icons.com/icons2/1834/PNG/512/iconfinderbmwlogo4140436-115966_115915.png"
+          src="https://st4.depositphotos.com/11433486/20755/v/450/depositphotos_207552596-stock-illustration-illustration-vector-element-of-a.jpg"
           alt="Logo-bmw"
-          whidth="60"
+          whidth="130"
         />
       </a>
       <Menu />

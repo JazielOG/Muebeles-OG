@@ -1,0 +1,54 @@
+.third-carousel {
+  background-color: #f0f0f0; // Color de fondo claro y suave
+  padding: 30px; // Espaciado interno alrededor del carrusel
+  border-radius: 12px; // Bordes redondeados
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); // Sombra más intensa
+
+  .carousel-title {
+    font-size: 1.3rem; // Tamaño de fuente grande
+    color: #333; // Color oscuro para el texto
+    margin-bottom: 25px;
+    text-align: center; // Centrado
+    font-weight: bold; // Negrita
+  }
+
+  .carousel-items-container {
+    display: grid; // Diseño en cuadrícula
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(300px, 1fr)
+    ); // Ancho mínimo de 300px
+    gap: 50px; // Espaciado entre items
+    justify-items: center; // Centra los items
+
+    .carousel-item {
+      width: 100%; // Ancho completo
+      border-radius: 15px; // Bordes más redondeados
+      overflow: hidden; // Esconde el desbordamiento
+      transition: transform 0.3s ease, box-shadow 0.3s ease; // Transiciones suaves
+      background-color: white; // Fondo blanco para las tarjetas
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Sombra sutil para las tarjetas
+      padding: 20px; // Espaciado interno
+      text-align: center; // Centrado
+
+      &:hover {
+        transform: translateY(-10px); // Desplazamiento más pronunciado en hover
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); // Sombra más intensa en hover
+      }
+
+      .carousel-item-image {
+        width: 100%; // Ancho completo
+        height: 290px; // Aumento en la altura de las imágenes
+        object-fit: cover; // Mantiene la proporción de la imagen
+        border-radius: 10px; // Bordes redondeados en las imágenes
+      }
+
+      .carousel-item-tag {
+        margin-top: 15px; // Espaciado superior
+        font-size: 1rem; // Tamaño de fuente más grande
+        color: #444; // Color de texto más suave
+        font-weight: 600; // Peso de fuente
+      }
+    }
+  }
+}

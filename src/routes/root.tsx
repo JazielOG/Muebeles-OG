@@ -4,6 +4,10 @@ import { Homepage } from "../pages/homepage/Homepage";
 import { ProductPage } from "../pages/product/product";
 import { ShoppingCartPage } from "../pages/shopping-card/ShoppingCard";
 import { Checkout } from "../pages/checkout/checkout";
+import { BedroomsPage } from "../pages/bedrooms/bedrooms";
+import { StovePage } from "../pages/stove/stove";
+import { LivingPage } from "../pages/living/living";
+import { DiningPage } from "../pages/dining/dining";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +17,22 @@ const router = createBrowserRouter([
   {
     path: "coches",
     element: <CochesPage />,
+  },
+  {
+    path: "bedrooms",
+    element: <BedroomsPage />,
+  },
+  {
+    path: "stove",
+    element: <StovePage />,
+  },
+  {
+    path: "living",
+    element: <LivingPage />,
+  },
+  {
+    path: "dining",
+    element: <DiningPage />,
   },
   {
     path: "product/:productId",

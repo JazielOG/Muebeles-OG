@@ -1,0 +1,76 @@
+.product-Ct {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  max-width: 550px; // Más ancho para el diseño grande
+
+  &:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  &-img {
+    width: 100%;
+    height: 400px; // Imagen más grande para destacar visualmente
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+  }
+
+  &-footer {
+    padding: 1.5rem 2rem; // Más espacio en el pie de página
+    text-align: center;
+    color: #333;
+    font-size: 1.3rem;
+
+    label {
+      font-weight: 200;
+      font-size: 1.5rem; // Texto más grande
+      color: #333;
+      margin-bottom: 0.7rem;
+    }
+
+    .product-Ct-extra {
+      font-size: 1rem;
+      color: #666;
+      margin-top: 0.7rem;
+      line-height: 1.5;
+    }
+
+    .product-Ct-price {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #1e90ff;
+      margin: 1.2rem 0;
+    }
+
+    .product-Ct-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: white;
+      background-color: #1e90ff;
+      border-radius: 8px;
+      margin-top: 1.2rem;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #1c86ee;
+      }
+
+      svg {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

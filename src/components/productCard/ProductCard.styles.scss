@@ -1,74 +1,97 @@
+// Contenedor de las tarjetas (product-card) que organiza los elementos en un grid
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); // Crea un grid de 3 columnas, cada columna ocupa el mismo espacio
+  gap: 2rem; // Espacio de 2rem entre cada tarjeta
+  padding: 1rem; // Espacio alrededor del grid
+}
+
+// Estilos para las tarjetas individuales (product-card)
 .product-card {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1.5rem;
-  max-width: 25rem;
-  text-decoration: none;
-  color: #333;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  flex-direction: column; // Las tarjetas están organizadas en una columna (imagen arriba, texto abajo)
+  align-items: center; // Alinea el contenido al centro horizontalmente
+  padding: 1rem; // Espacio interno dentro de cada tarjeta
+  max-width: 100%; // La tarjeta ocupa todo el ancho de su columna
+  text-decoration: none; // Elimina subrayado de enlaces, si es que lo hay
+  color: #333; // Color del texto principal
+  border: 1px solid #ddd; // Borde ligero alrededor de la tarjeta
+  border-radius: 8px; // Bordes redondeados en la tarjeta
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); // Sombra suave para un efecto de elevación
+  transition: transform 0.3s, box-shadow 0.3s; // Transición suave para el efecto hover
 
+  // Estilo cuando se hace hover sobre la tarjeta
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px); // Levanta la tarjeta ligeramente hacia arriba
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35); // Aumenta la sombra al hacer hover
   }
 
+  // Estilos para la imagen dentro de la tarjeta
   &-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
+    width: 100%; // La imagen ocupa todo el ancho disponible en la tarjeta
+    height: auto; // Ajusta la altura automáticamente para mantener la proporción
+    border-radius: 8px; // Bordes redondeados para la imagen
+    object-fit: contain; // Asegura que la imagen completa se muestre sin recortes
+    aspect-ratio: 4/3; // Mantiene una proporción de 4:3 para evitar distorsión
   }
 
+  // Estilos para el footer (parte inferior de la tarjeta)
   &-footer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
-    width: 100%;
-    text-align: center;
+    flex-direction: column; // El contenido del footer se organiza en columna
+    align-items: center; // El contenido del footer está centrado
+    margin-top: 1rem; // Espacio superior antes del footer
+    width: 100%; // El footer ocupa todo el ancho de la tarjeta
+    text-align: center; // Texto centrado en el footer
   }
 
+  // Estilos para el precio
   &-price {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #4e4e4e;
+    font-size: 1.125rem; // Tamaño de letra del precio, ligeramente más pequeño
+    font-weight: 600; // Peso de fuente más grueso para el precio
+    color: #4e4e4e; // Color gris oscuro para el precio
   }
 
+  // Estilos para el label del producto
   label {
-    font-size: 0.875rem;
-    color: #666;
-    margin-bottom: 0.5rem;
+    font-size: 0.85rem; // Tamaño de letra pequeño para el label
+    color: #666; // Color gris para el label
+    margin-bottom: 0.5rem; // Espacio inferior para separar el label de otros elementos
+    margin-top: 2rem; // Espacio superior para separar el label de la imagen
   }
 }
 
+// Estilos para el footer general que incluye el botón de la tarjeta
 .product-card-footer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
+  justify-content: center; // Centra horizontalmente los elementos del footer
+  align-items: center; // Centra verticalmente los elementos del footer
+  gap: 0.25rem; // Espacio entre los elementos del footer (por ejemplo, entre botones)
+  width: 100%; // El footer ocupa todo el ancho de la tarjeta
 }
 
+// Estilos para el botón dentro de la tarjeta
 .product-card-button {
-  font-size: 0.875rem;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  background-color: #0070ff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background-color 0.3s;
+  font-size: 0.85rem; /* Tamaño de fuente relativamente pequeño */
+  padding: 0.5rem 1rem; /* Ligero ajuste en el padding para un equilibrio mejor */
+  border-radius: 6px; /* Bordes un poco más redondeados para suavidad */
+  background-color: #0070ff; /* Color azul llamativo */
+  color: #fff; /* Texto blanco para buen contraste */
+  border: none; /* Sin bordes visibles */
+  cursor: pointer; /* Indicador de clic */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  transition: background-color 0.3s, transform 0.3s; /* Transición para suavizar cambios de color y movimiento */
 
+  // Estilo del botón al hacer hover
   &:hover {
-    background-color: rgb(31, 52, 142);
+    background-color: #003bb3; // Color azul más oscuro al pasar el mouse por encima
   }
 
+  // Estilos para íconos SVG dentro del botón (si los hubiera)
   svg {
-    margin-left: 0.5rem;
+    margin-left: 0.5rem; // Espacio a la izquierda del ícono, si es que hay uno
   }
 }

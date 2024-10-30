@@ -1,0 +1,48 @@
+.product-sv {
+  width: 80%; // Ancho del 80%
+  margin: 20px auto; // Margen vertical para separación entre productos, centrado horizontalmente
+  position: relative; // Para permitir efectos de hover
+  text-align: center; // Centra el texto
+
+  &-img {
+    width: 100%; // La imagen ocupa todo el ancho del componente
+    height: auto; // Mantiene la proporción
+    max-height: 400px; // Altura máxima para que las imágenes no se corten
+    object-fit: cover; // Ajusta la imagen para que no se distorsione
+    transition: transform 0.3s; // Transición suave para el efecto hover
+
+    &:hover {
+      transform: scale(1.1); // Efecto lupa al pasar el cursor
+    }
+  }
+
+  &-footer {
+    margin-top: 10px; // Espacio entre la imagen y el texto
+
+    .product-sv-description,
+    .product-sv-price {
+      font-size: 1.1rem; // Tamaño del texto
+      color: #333; // Color del texto
+      text-decoration: none; // Sin subrayado
+    }
+
+    .product-sv-price {
+      font-weight: bold; // Texto en negrita
+      color: #007bff; // Color del precio
+    }
+
+    .product-sv-button {
+      margin-top: 10px; // Espacio encima del botón
+      background-color: #007bff; // Color de fondo del botón
+      color: #fff; // Color del texto del botón
+      padding: 10px 20px; // Espaciado interno del botón
+      border: none; // Sin borde
+      border-radius: 5px; // Bordes redondeados
+      cursor: pointer; // Cambia el cursor al pasar sobre el botón
+
+      &:hover {
+        background-color: darken(#007bff, 10%); // Efecto hover en el botón
+      }
+    }
+  }
+}

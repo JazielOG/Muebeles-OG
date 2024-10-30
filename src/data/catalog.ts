@@ -3,89 +3,97 @@ import { ProductCardProps } from "../components/productCard/ProductCard";
 const catalogCar: ProductCardProps[] = [
   {
     imagesUrl: [
-      "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_205898030eb7491faedcaf84d8fa275d.jpg",
-      "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_a63500a323824372aff9757f5ca6975c.jpg",
-      "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_a63500a323824372aff9757f5ca6975c.jpg",
+      "https://www.decoracionbeltran.com/62239-superlarge_default/vitrina-en-madera-y-metal-savage.jpg",
+      "https://www.decoracionbeltran.com/62259-superlarge_default/vitrina-estilo-industrial-savage.jpg",
     ],
-    description: "BMW X5 M50i: Potente y elegante SUV con motor V8.",
-    price: 85900,
-    id: "28379823",
-    title: "BMW X5 M50i",
-  },
-  {
-    imagesUrl: [
-      "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_a63500a323824372aff9757f5ca6975c.jpg",
-    ],
-    description: "BMW 330i: Sedan deportivo con tecnología avanzada.",
-    price: 48900,
+    description: "Vitrina Industrial en color rustico, bace en herreria",
+    price: 24500,
     id: "8037803",
-    title: "BMW 330i",
+    title: "Vitrina Minimalista en color rustico",
   },
   {
     imagesUrl: [
-      "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_a180957b61e64c229e6c65db033307a7.jpg",
+      "https://cdn1.vente-unique.com/thumbnails/product/68/68159/big_size_for_external_link/xs/sillon_159152.jpg",
+    ],
+    description: "Sillon en tela tacto piel, en color negro 1 pz",
+    price: 8500,
+    id: "28379823",
+    title: "Sillon",
+  },
+  {
+    imagesUrl: [
+      "https://www.ohcielos.com/images/thumbs/aparador-bajo-vitrina-industrial-53570.jpg",
+      "https://www.ohcielos.com/images/thumbs/estanteria-industrial-baja-hierro-madera-53568.jpg",
+    ],
+    description: "Centro de TV Industrial en color natural",
+    price: 45900,
+    id: "28379824",
+    title: "Centro TV",
+  },
+  {
+    imagesUrl: [
+      "https://norykhome.com/10190-large_default/armario-industrial-madera-de-abeto-grang.jpg",
+    ],
+    description: "Cantina Industrial (Caba) Rustica",
+    price: 19800,
+    id: "8037804",
+    title: "Cantina",
+  },
+  {
+    imagesUrl: [
+      "https://woodenboxstore.com/cdn/shop/products/Buroestiloindustrialcolornogalmaderanogal_herrerianegra.png?v=1605369120",
+    ],
+    description: "Buroe Insdustrial Clasico",
+    price: 3200,
+    id: "8037805",
+    title: "Buroe",
+  },
+  {
+    imagesUrl: [
+      "https://static.wixstatic.com/media/7dbb81_512018d494224b3daea01b5b949dafab~mv2.jpeg/v1/fill/w_560,h_560,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/7dbb81_512018d494224b3daea01b5b949dafab~mv2.jpeg",
+      "https://http2.mlstatic.com/D_NQ_NP_672254-MLM70378190102_072023-O.webp",
     ],
     description:
-      "BMW M4 Coupe: Diseño aerodinámico y rendimiento sobresaliente.",
-    price: 74900,
-    id: "28379824",
-    title: "BMW M4 Coupe",
-  },
-  {
-    imagesUrl: [
-      "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_01a3e511b9b24626b213b8728bbe8e59.jpg",
-    ],
-    description: "BMW X3: SUV versátil con espacio y confort.",
-    price: 45900,
-    id: "8037804",
-    title: "BMW X3",
-  },
-  {
-    imagesUrl: [
-      "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_a2a8e9d89b91447db40ebbc6d55db63a.jpg",
-    ],
-    description: "BMW 740i: Lujo y tecnología en un elegante sedan.",
-    price: 92900,
+      "Meza Cubierta en madera de pino y bace de herreria en tono natural",
+    price: 10500,
     id: "28379825",
-    title: "BMW 740i",
+    title: "Meza",
   },
-  {
-    imagesUrl: [
-      "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_a180957b61e64c229e6c65db033307a7.jpg",
-    ],
-    description: "BMW Z4 Roadster: Deportividad y libertad al volante.",
-    price: 55900,
-    id: "8037805",
-    title: "BMW Z4 Roadster",
-  },
+
   // Nuevos modelos
   {
     imagesUrl: [
-      "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/xl/RT_V_a63500a323824372aff9757f5ca6975c.jpg", // Cambia la URL por la de tu nueva imagen
+      "https://www.ohcielos.com/images/aparador-industrial-madera-patas-hierro-negro-53337.jpg",
+      "https://www.infomuebles.net/wp-content/uploads/2020/10/Mueble-TV-estilo-industrial-madera-forja-bicolor.jpeg", // Cambia la URL por la de tu nueva imagen
     ],
-    description: "BMW i4: El sedán eléctrico con tecnología de vanguardia.",
-    price: 67900,
+    description: "Centro de TV Industrial",
+    price: 8200,
     id: "1000001",
-    title: "BMW i4",
+    title: "Centro de tv",
   },
   {
     imagesUrl: [
-      "https://www.bmw.com.mx/content/dam/bmw/common/all-models/x-series/series-overview/bmw-x-series-overview-page-model-carousel-02.jpg.asset.1618383725630.jpg", // Cambia la URL por la de tu nueva imagen
+      "https://resources.sears.com.mx/medios-plazavip/t1/17166035812F3A0001HDRjpg?scale=500&qlty=75",
+      "https://siman.vtexassets.com/arquivos/ids/4606514/102757698_30.jpg?v=638285830952700000", // Cambia la URL por la de tu nueva imagen
     ],
-    description: "BMW X7: El SUV de lujo para toda la familia.",
-    price: 89900,
+    description:
+      "Comedor de 6 sillas enchapado de encino en tono nogal clasico",
+    price: 19800,
     id: "1000002",
-    title: "BMW X7",
+    title: "Comedor",
   },
   {
     imagesUrl: [
-      "https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_205898030eb7491faedcaf84d8fa275d.jpg",
+      "https://www.ohcielos.com/images/comoda-industrial-hierro-madera-abeto-0426651-24480.jpg",
+      "https://media.adeo.com/marketplace/MKP/88608889/b8bb28e83a9dcefbfd3a70cc7a6c22f7.jpeg?width=3000&height=3000&format=jpg&quality=80&fit=bounds",
     ],
-    description: "BMW 8 Series: Deportividad y elegancia en cada curva.",
-    price: 92900,
+    description: "Cajonera en color natural con herreria",
+    price: 12900,
     id: "1000003",
-    title: "BMW 8 Series",
+    title: "Cajonera",
   },
 ];
 
 export { catalogCar };
+
+//CATALOGO DE INDUSTRIALES

@@ -1,0 +1,65 @@
+.product-Mb {
+  display: flex; /* Disposición horizontal */
+  background-color: #ffffff; /* Fondo blanco para la tarjeta */
+  border-radius: 8px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta el contenido que sobresale */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: transform 0.3s ease; /* Transición suave para el efecto de hover */
+
+  &:hover {
+    transform: scale(
+      1.02
+    ); /* Aumenta ligeramente la tarjeta al pasar el mouse */
+  }
+
+  &-img {
+    width: 100%; /* La imagen ocupa el 100% de la tarjeta */
+    height: 300px; /* Altura fija para mantener proporciones uniformes */
+    object-fit: cover; /* Asegura que la imagen mantenga sus proporciones */
+    transition: transform 0.3s ease; /* Transición suave para el efecto de lupa */
+  }
+
+  .product-Mb-extra {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+  }
+
+  &-content {
+    display: flex; /* Utiliza flexbox para alinear el contenido */
+    flex-direction: column; /* Alinea los elementos en columna */
+    justify-content: center; /* Centra verticalmente los elementos */
+    padding: 1rem; /* Espaciado interno */
+    flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
+    text-align: center; /* Centra el texto */
+    gap: 0.5rem; /* Espacio entre los elementos del contenido */
+
+    label {
+      font-size: 1rem; /* Tamaño de fuente de la descripción */
+      color: #333; /* Color oscuro para la legibilidad */
+      text-decoration: none; /* Sin subrayado */
+    }
+
+    .product-Mb-price {
+      font-size: 1.2rem; /* Tamaño de fuente para el precio */
+      color: #007bff; /* Color azul para destacar el precio */
+      font-weight: bold; /* Hace que el precio sea más prominente */
+      margin: 0; /* Elimina márgenes innecesarios */
+    }
+
+    .product-Mb-button {
+      background-color: #007bff; /* Color de fondo azul para el botón */
+      color: white; /* Color de texto blanco */
+      padding: 0.5rem 1rem; /* Espaciado interno del botón */
+      border-radius: 4px; /* Bordes redondeados para el botón */
+      text-decoration: none; /* Quita el subrayado del enlace */
+      display: flex; /* Alinea el icono del carrito y el texto */
+      align-items: center; /* Centra verticalmente el contenido */
+      justify-content: center; /* Centra horizontalmente el contenido */
+
+      &:hover {
+        background-color: #0056b3; /* Color más oscuro al hacer hover */
+      }
+    }
+  }
+}

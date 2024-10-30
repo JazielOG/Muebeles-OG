@@ -1,7 +1,20 @@
 .catalog {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); // Organiza los items en 3 columnas como en .product-grid
+  gap: 2rem; // Espacio entre cada tarjeta
+  padding: 2rem; // Espacio interno alrededor del grid
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); // En pantallas más pequeñas, cambia a 2 columnas
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; // En pantallas muy pequeñas, cambia a 1 columna
+  }
 }

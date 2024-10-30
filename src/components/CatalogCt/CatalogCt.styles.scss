@@ -1,0 +1,13 @@
+.Catalog-Ct {
+  display: grid;
+  grid-template-columns: 1fr 1fr; // Dos columnas
+  gap: 2rem; // Espacio entre los productos
+  padding: 2rem;
+  max-width: 1200px; // Limitar el ancho máximo de la cuadrícula para un diseño equilibrado
+  margin: auto; // Centrar la cuadrícula
+
+  // Diseño responsivo
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // Una columna en pantallas pequeñas
+  }
+}

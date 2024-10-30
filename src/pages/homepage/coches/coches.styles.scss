@@ -1,0 +1,10 @@
+.coches-page-img {
+  width: 100%; // Ocupa todo el ancho del contenedor
+  margin-top: 2rem; // Separación superior
+  max-width: 1200px; // Define un ancho máximo para evitar que sea demasiado grande en pantallas grandes
+  display: block; // Asegura que se comporte como un bloque
+  margin-left: auto; // Centra la imagen horizontalmente
+  margin-right: auto;
+  border-radius: 8px; // Bordes redondeados para darle un toque elegante
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra sutil para un efecto de profundidad
+}

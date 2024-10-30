@@ -1,44 +1,52 @@
-$carouseld-item-heigh: 24rem;
-
 .carousel-item {
-  flex: 1 0 32%; // Ajuste del ancho para mejor espaciado
-  height: 10rem;
-  display: inline-block;
-  margin: 10px;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra suave
-  position: relative; // Asegura que los elementos hijos con posición absoluta se mantengan dentro
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff; // Fondo blanco para el item
+  border-radius: 8px; // Bordes redondeados
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); // Sombra sutil
+  overflow: hidden; // Ocultar contenido que sobresale
+  transition: transform 0.3s, box-shadow 0.3s; // Transición suave para efectos
 
   &:hover {
-    transform: translateY(-5px); // Suave animación al hacer hover
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); // Levantar el item al pasar el mouse
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); // Aumentar sombra al hacer hover
   }
 
-  &-image {
-    width: 100%;
-    height: auto;
-    max-height: 18rem;
-    object-fit: cover; // Imagen manteniendo proporciones
-    border-bottom: 1px solid #e0e0e0;
+  .carousel-item-image {
+    height: 260px; // Altura fija
+    object-fit: cover; // Ajustar imagen sin distorsión
+    border-bottom: 2px solid #f0f0f0; // Separador suave
   }
 
-  &-tag {
-    position: absolute; // Asegura que el botón esté dentro del contenedor
-    bottom: 4rem; // Ajustamos la posición más alta para visibilidad
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #000;
-    color: #fff;
-    padding: 0.6rem 1rem;
-    font-size: 1rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    border-radius: 5px;
-    letter-spacing: 0.05rem;
-    font-family: "Lato", sans-serif;
-    z-index: 1; // Asegura que el botón esté visible sobre la imagen
+  .carousel-item-info {
+    padding: 15px; // Espaciado interno
+    text-align: center; // Centramos texto
+  }
+
+  .carousel-item-description {
+    font-size: 14px; // Tamaño de fuente para la descripción
+    color: #666; // Color de texto más suave
+    margin: 10px 0; // Espaciado vertical
+  }
+
+  .carousel-item-price {
+    font-size: 16px; // Tamaño de fuente para el precio
+    font-weight: 600; // Negrita para el precio
+    color: #333; // Color más oscuro para mayor legibilidad
+    margin: 5px 0; // Espaciado vertical
+  }
+
+  .carousel-item-button {
+    margin-top: 10px; // Espaciado superior para el botón
+    background-color: #007bff; // Color de fondo del botón
+    color: white; // Color del texto del botón
+    padding: 10px 15px; // Espaciado interno del botón
+    border-radius: 5px; // Bordes redondeados para el botón
+    transition: background-color 0.3s; // Transición para el cambio de color
+
+    &:hover {
+      background-color: #0056b3; // Color del botón al pasar el mouse
+    }
   }
 }

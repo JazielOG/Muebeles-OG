@@ -1,7 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { ShoppingCardContext } from "../../providers/ShoppingCardContext";
 import { ProductCardProps } from "../../components/productCard/ProductCard";
-
 import "./ShoppingCard.styles.scss";
 import { setToLocalStorage } from "../../utils/localStorage";
 import { ButtonLink } from "../../components/ButtonLink/ButtonLink";

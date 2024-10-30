@@ -13,10 +13,7 @@ const Hero: FC<HeroProps> = ({ imageUrl, imageText, headline, button }) => {
   return (
     <div className="hero">
       <img className="img-backgroud" src={imageUrl} alt={imageText} />
-      <div className="cta">
-        <h1 className="headline">{headline}</h1>
-        {button && <ButtonLink {...button} />}
-      </div>
+      <div className="cta">{button && <ButtonLink {...button} />}</div>
     </div>
   );
 };

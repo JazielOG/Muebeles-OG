@@ -6,13 +6,17 @@
   a {
     display: flex;
     align-items: center;
-    color: #645e5e; // Color más suave para el texto
+    color: rgb(178, 175, 175); // Color más suave para el texto
     font-size: 1.6rem; // Tamaño de fuente ligeramente más pequeño para un aspecto más elegante
     padding: 1rem 1.5rem; // Espaciado uniforme
 
     &:hover {
-      color: #000; // Color de texto en el hover para mejorar la visibilidad
-      border-bottom: 2px solid #000; // Agrega una línea de resaltado debajo del enlace
+      color: rgb(
+        178,
+        175,
+        175
+      ); // Color de texto en el hover para mejorar la visibilidad
+      border-bottom: 2px solid rgb(178, 175, 175); // Agrega una línea de resaltado debajo del enlace
     }
   }
 }

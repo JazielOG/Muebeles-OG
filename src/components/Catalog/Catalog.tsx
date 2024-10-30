@@ -19,3 +19,5 @@ const Catalog: FC<CatalogProps> = ({ productList }) => {
 };
 
 export { Catalog };
+
+//RECAMARAS
