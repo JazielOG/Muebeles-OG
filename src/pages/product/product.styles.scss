@@ -1,48 +1,116 @@
 .product-page {
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  align-items: center; // Centra todo el contenido horizontalmente
+  padding: 2rem;
+  background-color: #f9f9f9;
 
-  &- body {
+  &-body {
     display: flex;
-    flex-direction: row;
-    margin-bottom: 2rem;
-  }
-
-  &-carousel,
-  &-detail-wraper {
-    width: 50%;
-    padding: 1rem;
-    height: max-content;
-  }
-
-  img {
-    height: calc(40vh - 48px);
+    flex-direction: column;
+    max-width: 800px;
     width: 100%;
-    object-fit: cover;
+    background-color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); // Sombra suave alrededor del contenedor
+    border-radius: 12px;
+    padding: 1.5rem;
+    overflow: hidden;
+
+    .product-page-carousel {
+      width: 100%;
+      margin-bottom: 1.5rem; // Espacio entre la imagen y el texto
+      img {
+        width: 100%;
+        height: 750px; // Reduce la altura para evitar imágenes demasiado grandes
+        object-fit: cover; // La imagen se recorta para llenar el contenedor
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); // Sombra suave en la imagen
+      }
+    }
+
+    .product-page-detail-wraper {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      align-items: center; // Centra el contenido del detalle horizontalmente
+
+      .product-page-detail-title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #333;
+        text-align: center; // Centra el texto del título
+      }
+
+      .product-page-detail-price {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #1e90ff;
+        margin: 0.5rem 0;
+        text-align: center; // Centra el texto del precio
+      }
+
+      .product-page-detail-description {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #666;
+        text-align: center; // Centra el texto de la descripción
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+        align-items: center; // Centra el contenido del formulario horizontalmente
+
+        label {
+          display: flex;
+          flex-direction: column;
+          font-size: 1rem;
+          color: #333;
+          font-weight: 500;
+          align-items: center; // Centra el texto y el campo de selección
+
+          select {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #333;
+            background-color: #f4f4f4;
+            transition: border 0.3s ease;
+
+            &:focus {
+              outline: none;
+              border-color: #1e90ff; // Cambia el borde al enfocarse
+            }
+          }
+
+          input[type="submit"] {
+            margin-top: 1rem;
+            padding: 0.8rem;
+            border: none;
+            background-color: #1e90ff;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: #1c86ee; // Color más oscuro en hover
+            }
+          }
+        }
+      }
+    }
   }
 
-  &-detail-price-wrapper {
-    display: flex;
-  }
-
-  &-detail-title {
-    font-size: 2.5rem;
-  }
-
-  &-detail-price {
-    font-size: 2rem;
-    font-weight: 700;
-  }
-
-  &-detail-discount {
-    border: 1px solid red;
-    border-radius: 4px;
-    color: red;
-    margin-left: 0.5rem;
-    font-size: 2rem;
-    padding: 0 0.125rem;
-    display: flex;
-    align-items: center;
+  label {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333;
+    margin-top: 2rem;
   }
 }

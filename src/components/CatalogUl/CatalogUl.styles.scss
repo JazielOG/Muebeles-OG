@@ -1,0 +1,14 @@
+.Catalog-Ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+
+  .product-ul:nth-child(odd) {
+    flex-direction: row;
+  }
+
+  .product-ul:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}

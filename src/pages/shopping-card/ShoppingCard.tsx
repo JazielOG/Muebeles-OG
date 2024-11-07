@@ -80,9 +80,7 @@ const ShoppingCartPage = () => {
 
                 <button onClick={() => handeClick(product.id)}>Eliminar</button>
               </div>
-              <div className="shopping-cart-page-product-price">
-                ${product.price}
-              </div>
+
               <div className="shopping-cart-page-product-total">
                 ${product.quantity! * product.price}
               </div>
@@ -91,7 +89,6 @@ const ShoppingCartPage = () => {
         })}
         <div className="shopping-cart-page-total">
           <div>Total: ${total}</div>
-          <label>Proceder al pago</label>
           <ButtonLink
             href="checkout"
             label="proceder al pago"

@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #38393b; // Color de fondo (un azul sofisticado)
+  padding: 6px 20px;
+  background-color: #0055ff; // Color de fondo (un azul sofisticado)
   color: #ffffff; // Color del texto
   font-weight: 600;
   font-size: 1rem;
@@ -15,7 +15,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   &:hover {
-    background-color: #0c224a; // Oscurece el color al hacer hover
+    background-color: #0059ff; // Oscurece el color al hacer hover
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); // Aumenta la sombra al hacer hover
     transform: translateY(-2px); // Levanta un poco el botón
   }

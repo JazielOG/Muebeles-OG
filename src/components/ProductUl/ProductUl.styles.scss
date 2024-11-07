@@ -1,0 +1,61 @@
+.product-ul {
+  display: flex;
+  flex-direction: row; // Coloca la imagen y el contenido en una disposición de fila, lado a lado
+  background-color: #fff; // Fondo blanco para el componente
+  border: 1px solid #e0e0e0; // Borde gris claro para definir el contorno del componente
+  border-radius: 8px; // Bordes ligeramente redondeados para un acabado más suave
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Sombra suave para dar profundidad
+  overflow: hidden; // Oculta cualquier contenido que sobresalga, como bordes redondeados en la imagen
+  transition: transform 0.3s ease-in-out; // Efecto de transición suave cuando el componente se transforma
+  height: 350px; // Altura fija para un diseño consistente de los elementos
+
+  &:hover {
+    transform: scale(1.02); // Efecto de escala más sutil
+  }
+
+  &-img {
+    width: 110%; // La imagen ocupa más que la mitad para un efecto visual atractivo
+    height: 100%; // Ajusta la imagen para que ocupe toda la altura del contenedor
+    object-fit: cover; // Recorta la imagen para llenar el contenedor sin distorsionar
+  }
+
+  &-footer {
+    display: flex;
+    flex-direction: column; // Organiza el contenido en una columna: descripción, precio, y botón en ese orden
+    align-items: center; // Centra el contenido horizontalmente
+    justify-content: center; // Centra el contenido verticalmente
+    padding: 90px; // Espaciado interno alrededor del contenido
+    width: 50%; // Ocupa la otra mitad del contenedor (opuesto a la imagen)
+    text-align: center; // Centra el texto y otros elementos en la sección
+  }
+
+  &-description {
+    font-size: 1rem; // Tamaño de fuente más grande para hacer que la descripción sea legible
+    color: #333; // Color de texto oscuro para buena legibilidad
+    margin-bottom: 10px; // Espacio debajo de la descripción para separar de otros elementos
+  }
+
+  &-price {
+    font-size: 1rem; // Tamaño de fuente ligeramente más grande que la descripción para destacar el precio
+    font-weight: bold; // Texto en negrita para resaltar el precio
+    color: #2c3e50; // Color más oscuro para enfatizar
+    margin-bottom: 15px; // Espacio adicional debajo para separar del botón
+  }
+
+  &-button {
+    display: inline-flex; // Flexibilidad interna para alinear el texto y el icono dentro del botón
+    align-items: center; // Centra el contenido verticalmente
+    justify-content: center; // Centra el contenido horizontalmente
+    background-color: #007bff; // Fondo azul para el botón
+    color: #fff; // Texto blanco para contraste sobre el fondo azul
+    padding: 6px 16px; // Relleno alrededor del texto para dar espacio y hacer clic más fácil
+    border-radius: 4px; // Bordes redondeados para un estilo visual agradable
+    font-size: 1rem; // Tamaño de fuente estándar
+    margin-top: 10px; // Espacio encima del botón para separarlo del precio
+    transition: background-color 0.3s; // Transición suave cuando cambia el color de fondo en hover
+
+    &:hover {
+      background-color: #0056b3; // Fondo más oscuro en hover para indicar interactividad
+    }
+  }
+}

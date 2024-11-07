@@ -1,75 +1,76 @@
 .product-Ct {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-decoration: none;
-  color: inherit;
+  flex-direction: column; // Coloca los elementos en una columna dentro del contenedor
+  justify-content: space-between; // Espacia los elementos de manera uniforme en la columna
+  background-color: white; // Fondo blanco para destacar los elementos
+  border: 1px solid #ddd; // Borde sutil para separar visualmente el contenedor
+  border-radius: 12px; // Bordes redondeados para un aspecto más moderno
+  overflow: hidden; // Oculta el contenido que se salga de los bordes redondeados
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); // Sombra para un efecto de profundidad
+  transition: transform 0.3s, box-shadow 0.3s; // Transiciones suaves para escala y sombra en hover
+  text-decoration: none; // Elimina subrayado en el contenedor, útil si es un enlace
+  color: inherit; // Hereda el color del texto
   width: 100%;
-  max-width: 550px; // Más ancho para el diseño grande
+  max-width: 550px; // Ancho máximo para un diseño más amplio
 
   &:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02); // Efecto de aumento leve en hover
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); // Sombra más grande en hover para resaltar el elemento
   }
 
   &-img {
-    width: 100%;
-    height: 400px; // Imagen más grande para destacar visualmente
-    object-fit: cover;
-    border-bottom: 1px solid #ddd;
+    width: 100%; // Imagen ocupa todo el ancho del contenedor
+    height: 400px; // Altura de imagen para un diseño destacado
+    object-fit: cover; // Recorta la imagen para llenar el área sin distorsionar
+    border-bottom: 1px solid #ddd; // Separador visual entre imagen y contenido
   }
 
   &-footer {
-    padding: 1.5rem 2rem; // Más espacio en el pie de página
-    text-align: center;
-    color: #333;
-    font-size: 1.3rem;
+    padding: 1.5rem 2rem; // Espacio extra alrededor del contenido en el pie de página
+    text-align: center; // Centra el texto dentro del pie de página
+    color: #333; // Color de texto oscuro para contraste
+    font-size: 1.3rem; // Tamaño de fuente mayor para mejorar la legibilidad
 
     label {
-      font-weight: 200;
-      font-size: 1.5rem; // Texto más grande
-      color: #333;
-      margin-bottom: 0.7rem;
+      font-weight: 200; // Fuente más ligera para descripción del producto
+      font-size: 1.5rem; // Tamaño de texto más grande para el título o detalles importantes
+      color: #333; // Color oscuro para contraste
+      margin-bottom: 0.7rem; // Espacio entre el título y otros elementos
     }
 
     .product-Ct-extra {
-      font-size: 1rem;
-      color: #666;
-      margin-top: 0.7rem;
-      line-height: 1.5;
+      font-size: 1rem; // Texto más pequeño para información adicional
+      color: #666; // Color gris para menos énfasis
+      margin-top: 0.7rem; // Espacio sobre el texto adicional
+      line-height: 1.5; // Espaciado entre líneas para mejorar legibilidad
     }
 
     .product-Ct-price {
-      font-size: 1rem;
-      font-weight: bold;
-      color: #1e90ff;
-      margin: 1.2rem 0;
+      font-size: 1rem; // Tamaño moderado para el precio
+      font-weight: bold; // Fuente en negrita para resaltar el precio
+      color: #1e90ff; // Color azul para destacar el precio
+      margin: 1.2rem 0; // Espaciado alrededor del precio
     }
 
     .product-Ct-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: white;
-      background-color: #1e90ff;
-      border-radius: 8px;
-      margin-top: 1.2rem;
-      transition: background-color 0.3s;
+      display: inline-flex; // Botón en línea con flexibilidad
+      align-items: center; // Centra el contenido verticalmente
+      justify-content: center; // Centra el contenido horizontalmente
+      font-size: 1.2rem; // Tamaño de texto del botón
+      font-weight: bold; // Negrita para el texto del botón
+      color: white; // Texto en blanco para contraste sobre el fondo azul
+      background-color: #1e90ff; // Color de fondo azul para el botón
+      border-radius: 8px; // Bordes redondeados para el botón
+      padding: 6px 20px;
+      margin-top: 1rem; // Espacio sobre el botón
+      transition: background-color 0.3s; // Transición suave en el cambio de color de fondo
 
       &:hover {
-        background-color: #1c86ee;
+        background-color: #1c86ee; // Color de fondo más oscuro en hover
       }
 
       svg {
-        margin-left: 0.5rem;
+        margin-left: 0.5rem; // Espacio entre el texto del botón e ícono SVG (si lo hay)
       }
     }
   }

@@ -5,7 +5,7 @@
   text-align: center; // Centra el texto
 
   &-img {
-    width: 100%; // La imagen ocupa todo el ancho del componente
+    width: 60%; // La imagen ocupa todo el ancho del componente
     height: auto; // Mantiene la proporción
     max-height: 400px; // Altura máxima para que las imágenes no se corten
     object-fit: cover; // Ajusta la imagen para que no se distorsione
@@ -21,7 +21,7 @@
 
     .product-sv-description,
     .product-sv-price {
-      font-size: 1.1rem; // Tamaño del texto
+      font-size: 1rem; // Tamaño del texto
       color: #333; // Color del texto
       text-decoration: none; // Sin subrayado
     }
@@ -35,7 +35,7 @@
       margin-top: 10px; // Espacio encima del botón
       background-color: #007bff; // Color de fondo del botón
       color: #fff; // Color del texto del botón
-      padding: 10px 20px; // Espaciado interno del botón
+      padding: 6px 20px; // Espaciado interno del botón
       border: none; // Sin borde
       border-radius: 5px; // Bordes redondeados
       cursor: pointer; // Cambia el cursor al pasar sobre el botón

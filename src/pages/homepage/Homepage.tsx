@@ -35,7 +35,7 @@ const Homepage = () => {
         {/* Aquí inserté la imagen */}
         <div className="image-container">
           <img
-            src="https://uc-104.jottacloud.com/thumbnail/eyJ0IjoiMSIsImsiOiJBMWQifQ.9vd6wZDUS4ah-H7K03tokEI_muV6Uyh3frRU_rQ9n6N1RHFDwH5D_6ewF9w43hocAeNhNDDzFOOFJAq7psXBPy-9MNbU2uIbQKaOEEWhMxB54pPrCW3rfe9MAjsEKEnF.qyFDb0-GIjbkF4Csa7V_tA?size=2480x"
+            src="https://veracruz.anahuac.mx/hubfs/UAV%20APREU%20BLOG%20%284%29.png"
             alt="Diseño muebles"
             style={{
               width: "100%",
