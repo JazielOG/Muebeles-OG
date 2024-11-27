@@ -1,52 +1,112 @@
 .Catalog-mb {
   display: flex;
-  flex-direction: column; /* Alinea los productos uno debajo de otro */
-  gap: 2rem; /* Espacio entre cada producto */
+  flex-direction: column;
+  gap: 2rem;
   padding: 2rem;
-  background-color: #fafafa; /* Fondo suave para la sección */
+  background-color: #fafafa;
 
   & > * {
     background-color: #fff;
-    border-radius: 8px; /* Bordes redondeados para un estilo moderno */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar cada tarjeta */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para interacciones */
-
-    /* Establecer una altura fija para cada tarjeta */
-    height: 300px; /* Ajusta esta medida según sea necesario */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 300px;
 
     &:hover {
-      transform: translateY(-5px); /* Efecto de elevación al hacer hover */
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más profunda en hover */
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     }
   }
 
   div {
     display: flex;
-    flex-direction: column; /* Alinea los elementos verticalmente */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.75rem;
     width: 100%;
   }
 
-  /* Mensaje de "No hay productos disponibles" */
   div:not(.ProductMb) {
     font-size: 0.85rem;
     color: #666;
     margin-bottom: 0.5rem;
   }
 
-  /* Ajuste para el precio */
   .product-Mb-price {
     font-size: 0.85rem;
     color: #666;
     margin-bottom: 0.5rem;
   }
 
-  /* Asegúrate de eliminar cualquier subrayado en enlaces */
   a {
-    text-decoration: none !important; /* Elimina el subrayado de los enlaces */
-    color: inherit; /* Mantén el color del enlace igual que el texto circundante */
+    text-decoration: none !important;
+    color: inherit;
+  }
+
+  /* Media Queries para dispositivos de diferentes tamaños */
+
+  @media (max-width: 1440px) {
+    /* Para pantallas grandes como el Asus Zenbook Fold */
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  @media (max-width: 1280px) {
+    /* Para dispositivos como iPad Pro, Surface Pro 7 */
+    padding: 1.8rem;
+    gap: 1.8rem;
+  }
+
+  @media (max-width: 1024px) {
+    /* Para tablets como iPad Mini, iPad Air */
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    /* Para dispositivos como iPhone XR, Pixel 7, Samsung Galaxy S8+ */
+    padding: 1rem;
+    gap: 1.2rem;
+    & > * {
+      height: 250px; /* Ajuste de altura para estos dispositivos */
+    }
+  }
+
+  @media (max-width: 600px) {
+    /* Para dispositivos como Samsung Galaxy A51, Galaxy A71, iPhone 12 Pro */
+    padding: 1rem;
+    gap: 1rem;
+    & > * {
+      height: 220px; /* Ajuste de altura para dispositivos pequeños */
+    }
+  }
+
+  @media (max-width: 540px) {
+    /* Para dispositivos más pequeños como iPhone SE, Galaxy Z Fold 5 */
+    padding: 0.8rem;
+    gap: 0.8rem;
+    & > * {
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    /* Para dispositivos como el Nest Hub y Nest Hub Max */
+    padding: 0.6rem;
+    gap: 0.6rem;
+    & > * {
+      height: 180px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    /* Para dispositivos de pantallas extremadamente pequeñas */
+    padding: 0.5rem;
+    gap: 0.5rem;
+    & > * {
+      height: 160px;
+    }
   }
 }

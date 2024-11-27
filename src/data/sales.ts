@@ -1,7 +1,7 @@
 // src/data/sales.ts
 import { CarouselItemProps } from "../components/Carousel/CarouselItem/CarouselItem"; // Importa el tipo
 
-export const sales: CarouselItemProps[] = [
+const sales: CarouselItemProps[] = [
   {
     id: "12453534", // Asegúrate de que tienes un id único
     imageUrl:
@@ -35,5 +35,7 @@ export const sales: CarouselItemProps[] = [
     price: 9000,
   },
 ];
+
+export { sales };
 
 //EL SEGUNDO CAROUSELD DEL MI HOMPAGE

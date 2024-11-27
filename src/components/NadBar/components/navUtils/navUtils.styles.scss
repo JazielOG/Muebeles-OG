@@ -19,4 +19,72 @@
       border-bottom: 2px solid rgb(178, 175, 175); // Agrega una línea de resaltado debajo del enlace
     }
   }
+
+  /* Media Queries para adaptabilidad */
+
+  /* Pantallas grandes (laptops y desktops) */
+  @media (max-width: 1440px) {
+    gap: 0.8rem; // Reduce el espacio entre enlaces
+    a {
+      font-size: 1.5rem;
+      padding: 0.8rem 1.2rem;
+    }
+  }
+
+  /* Tablets grandes (iPad Pro, Surface Pro) */
+  @media (max-width: 1280px) {
+    gap: 0.7rem;
+    a {
+      font-size: 1.4rem;
+      padding: 0.7rem 1rem;
+    }
+  }
+
+  /* Tablets medianas y pequeñas */
+  @media (max-width: 1024px) {
+    gap: 0.6rem;
+    a {
+      font-size: 1.3rem;
+      padding: 0.6rem 0.8rem;
+    }
+  }
+
+  /* Dispositivos móviles grandes (iPhone Plus, Galaxy S) */
+  @media (max-width: 768px) {
+    flex-direction: column; // Cambia a disposición vertical
+    gap: 0.5rem;
+    a {
+      font-size: 1.2rem;
+      padding: 0.5rem 0.6rem;
+      text-align: center; // Centra los enlaces para una mejor legibilidad
+    }
+  }
+
+  /* Dispositivos móviles medianos (iPhone XR, Galaxy S8) */
+  @media (max-width: 600px) {
+    gap: 0.4rem;
+    a {
+      font-size: 1.1rem;
+      padding: 0.4rem 0.5rem;
+    }
+  }
+
+  /* Dispositivos móviles pequeños (iPhone SE, Galaxy Z Fold) */
+  @media (max-width: 480px) {
+    z-index: 2;
+    gap: 0.3rem;
+    a {
+      font-size: 1rem;
+      padding: 0.3rem 0.4rem;
+    }
+  }
+
+  /* Dispositivos extremadamente pequeños (iPhone SE) */
+  @media (max-width: 375px) {
+    gap: 0.2rem;
+    a {
+      font-size: 0.9rem; // Tamaño de fuente reducido para maximizar espacio
+      padding: 0.2rem 0.3rem;
+    }
+  }
 }

@@ -6,7 +6,6 @@ import { useContext, useState } from "react";
 import Modal from "react-modal";
 import moment from "moment";
 import { ProductCardProps } from "../../components/productCard/ProductCard";
-import { ShoppingCard } from "../../components/NadBar/components/ShoppingCart/ShoppingCart";
 import { ShoppingCardContext } from "../../providers/ShoppingCardContext";
 
 const Checkout = () => {

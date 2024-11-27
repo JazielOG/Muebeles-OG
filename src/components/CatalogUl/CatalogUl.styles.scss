@@ -11,4 +11,97 @@
   .product-ul:nth-child(even) {
     flex-direction: row-reverse;
   }
+
+  // Media Queries para dispositivos específicos
+
+  /* iPhone SE, Pixel 7, Galaxy A51 */
+  @media (max-width: 375px) {
+    .product-ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .product-ul:nth-child(odd),
+    .product-ul:nth-child(even) {
+      flex-direction: column;
+    }
+  }
+
+  /* iPhone XR, iPhone 12 Pro, Galaxy S8+, Galaxy A71 */
+  @media (max-width: 414px) {
+    .product-ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .product-ul:nth-child(odd),
+    .product-ul:nth-child(even) {
+      flex-direction: column;
+    }
+  }
+
+  /* iPhone 14 Pro Max, iPad Mini, iPad Air */
+  @media (max-width: 600px) {
+    .product-ul {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .product-ul:nth-child(odd),
+    .product-ul:nth-child(even) {
+      flex-direction: column;
+    }
+  }
+
+  /* iPad Pro, Surface Pro 7 */
+  @media (max-width: 768px) {
+    .product-ul {
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .product-ul:nth-child(odd),
+    .product-ul:nth-child(even) {
+      flex-direction: column;
+    }
+  }
+
+  /* Galaxy Z Fold 5, Asus Zenbook Fold */
+  @media (max-width: 820px) {
+    .product-ul {
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .product-ul:nth-child(odd),
+    .product-ul:nth-child(even) {
+      flex-direction: column;
+    }
+  }
+
+  /* Surface Duo */
+  @media (max-width: 900px) {
+    .product-ul {
+      flex-direction: column;
+      gap: 35px;
+    }
+
+    .product-ul:nth-child(odd),
+    .product-ul:nth-child(even) {
+      flex-direction: column;
+    }
+  }
+
+  /* Nest Hub, Nest Hub Max */
+  @media (max-width: 1024px) {
+    .product-ul {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .product-ul:nth-child(odd),
+    .product-ul:nth-child(even) {
+      flex-direction: column;
+    }
+  }
 }

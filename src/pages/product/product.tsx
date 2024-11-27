@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -12,6 +11,14 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Catalog } from "../../components/Catalog/Catalog";
 import { ShoppingCardContext } from "../../providers/ShoppingCardContext";
 import { setToLocalStorage } from "../../utils/localStorage";
+import { DiningUl } from "../../data/dining";
+import { furnitureMb } from "../../data/furniture";
+import { LivingCt } from "../../data/living";
+import { newArrivals } from "../../data/newArrivals";
+import { newCatalog } from "../../data/newCatalog";
+import { sales } from "../../data/sales";
+import { StoveCs } from "../../data/stove";
+import { trendingCards } from "../../data/trending-card";
 
 interface ProductFormProps {
   quantity: number;
@@ -25,15 +32,32 @@ const ProductPage = () => {
   const params = useParams();
   const [product, setProduct] = useState<ProductCardProps>();
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const catalogFull = [
+    ...catalogCar,
+    ...DiningUl,
+    ...furnitureMb,
+    ...LivingCt,
+    ...newArrivals,
+    ...newCatalog,
+    ...sales,
+    ...StoveCs,
+    ...trendingCards,
+  ];
+
   // useEffect con params.productId en las dependencias
   useEffect(() => {
-    const result = catalogCar.find((product) => {
-      return product.id === params.productId;
-    });
-    if (result) {
-      setProduct(result);
+    const result = catalogFull.find(
+      (product) => product.id === params.productId
+    );
+
+    // Verificamos si el producto tiene la propiedad 'imagesUrl' antes de asignarlo
+    if (result && "imagesUrl" in result) {
+      setProduct(result as ProductCardProps);
+    } else {
+      console.warn("Producto no compatible o no encontrado.");
     }
-  }, [params.productId]); // Agrega 'params.productId' en el array de dependencias
+  }, [catalogFull, params.productId]);
 
   // Guardar la lista de productos en el almacenamiento local si hay cambios
   useEffect(() => {
@@ -43,7 +67,6 @@ const ProductPage = () => {
   }, [productList]);
 
   const findProduct = () => {
-    // Si lo encuentra regresa la posicion, sino regresa un -1
     const result = productList.findIndex(
       (productSearch: ProductCardProps) => productSearch.id === product?.id
     );
@@ -55,7 +78,6 @@ const ProductPage = () => {
     const productIndex = findProduct();
 
     if (productIndex === -1) {
-      // Cuando no existe, lo añade a la lista
       setProductList([
         ...productList,
         {
@@ -64,13 +86,13 @@ const ProductPage = () => {
         },
       ]);
     } else {
-      // Cuando existe, solo modificalo
       productList[productIndex].quantity =
         Number(productList[productIndex].quantity) + Number(data.quantity);
       setProductList([...productList]);
     }
-    toast("Producto añadidod al carrito");
+    toast("Producto añadido al carrito");
   };
+
   if (!product) {
     return (
       <div>
@@ -83,7 +105,7 @@ const ProductPage = () => {
     <div className="product-page">
       <div className="product-page-body">
         <div className="product-page-carousel">
-          <EmblaCarousel slides={product?.imagesUrl} />
+          <EmblaCarousel slides={product.imagesUrl} />
         </div>
 
         <div className="product-page-detail-wraper">

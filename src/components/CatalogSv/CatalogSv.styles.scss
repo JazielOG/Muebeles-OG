@@ -3,4 +3,47 @@
   flex-direction: column; // Asegura que los productos se apilen verticalmente
   align-items: center; // Centra los elementos horizontalmente
   padding: 20px; // Espaciado alrededor del catálogo
+
+  /* Media Queries para adaptabilidad */
+
+  @media (max-width: 1440px) {
+    /* Dispositivos grandes como el Asus Zenbook Fold */
+    padding: 18px;
+  }
+
+  @media (max-width: 1280px) {
+    /* Dispositivos como iPad Pro y Surface Pro 7 */
+    padding: 16px;
+  }
+
+  @media (max-width: 1024px) {
+    /* Tablets como iPad Mini, iPad Air */
+    padding: 14px;
+  }
+
+  @media (max-width: 768px) {
+    /* Dispositivos como iPhone XR, Pixel 7, Samsung Galaxy S8+ */
+    flex-direction: column; /* Mantiene la disposición en columna */
+    padding: 12px;
+  }
+
+  @media (max-width: 600px) {
+    /* Para dispositivos como iPhone 12 Pro, Samsung Galaxy A51 */
+    padding: 10px;
+  }
+
+  @media (max-width: 540px) {
+    /* Para dispositivos más pequeños como iPhone SE, Galaxy Z Fold 5 */
+    padding: 8px;
+  }
+
+  @media (max-width: 480px) {
+    /* Para dispositivos como el Nest Hub y Nest Hub Max */
+    padding: 6px;
+  }
+
+  @media (max-width: 375px) {
+    /* Para dispositivos de pantallas extremadamente pequeñas */
+    padding: 4px;
+  }
 }

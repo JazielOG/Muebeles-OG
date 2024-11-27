@@ -1,34 +1,151 @@
 .nav-bar {
+  z-index: 2;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0 30px; // Más padding para mayor espacio
-  background-color: #2e2c2c; // Fondo oscuro para un look más sofisticado
-  color: #fff; // Texto blanco para contraste
-  height: 80px; // Ajusta la altura para que el contenido esté bien centrado
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Sombra más pronunciada para un efecto más elegante
-  z-index: 1000; // Asegura que el navbar esté por encima de otros elementos
+  padding: 0 30px; // Espacio más amplio en pantallas grandes
+  background-color: #2e2c2c;
+  color: #fff;
+  height: 80px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .logo {
   display: flex;
   align-items: center;
   text-decoration: none;
-}
 
-.logo img {
-  display: block;
+  img {
+    display: block;
+  }
 }
 
 .menu {
   display: flex;
-  gap: 20px; // Espacio entre los elementos del menú
+  gap: 20px; // Espacio amplio entre elementos del menú
 }
 
 .nav-utils {
   display: flex;
   align-items: center;
-  gap: 20px; // Espacio entre los elementos de utilidades
+  gap: 20px; // Espacio amplio entre elementos de utilidades
 }
 
-// Añade más estilos según sea necesario para los elementos del menú y utilidades
+/* --- Media Queries para adaptabilidad en diferentes dispositivos --- */
+
+/* Pantallas grandes como laptops y desktops */
+@media (max-width: 1440px) {
+  .nav-bar {
+    padding: 0 20px;
+    height: 70px;
+  }
+  .logo img {
+    width: 120px;
+  }
+  .menu {
+    gap: 15px;
+  }
+}
+
+/* Tablets grandes como iPad Pro y Surface Pro */
+@media (max-width: 1280px) {
+  .menu {
+    gap: 12px;
+  }
+}
+
+/* Tablets medianas y pequeñas */
+@media (max-width: 1024px) {
+  .menu {
+    gap: 10px;
+  }
+}
+
+/* Dispositivos móviles grandes y tablets pequeñas */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 100px;
+  }
+
+  .menu,
+  .nav-utils {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Dispositivos móviles medianos */
+@media (max-width: 600px) {
+  .nav-bar {
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 90px;
+  }
+
+  .menu {
+    gap: 5px;
+  }
+}
+
+/* Dispositivos móviles pequeños */
+@media (max-width: 540px) {
+  .nav-bar {
+    padding: 5px;
+    height: 60px;
+  }
+
+  .logo img {
+    width: 80px;
+  }
+
+  .menu {
+    gap: 5px;
+  }
+}
+
+/* Dispositivos muy pequeños */
+@media (max-width: 480px) {
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+  }
+
+  .logo img {
+    width: 70px;
+  }
+
+  .menu,
+  .nav-utils {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+/* Dispositivos extremadamente pequeños como iPhone SE */
+@media (max-width: 375px) {
+  .nav-bar {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .menu {
+    gap: 5px;
+  }
+}

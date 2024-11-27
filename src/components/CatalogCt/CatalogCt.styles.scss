@@ -6,8 +6,66 @@
   max-width: 1200px; // Limitar el ancho máximo de la cuadrícula para un diseño equilibrado
   margin: auto; // Centrar la cuadrícula
 
-  // Diseño responsivo
+  @media (max-width: 1280px) {
+    /* Para dispositivos como el iPad Pro y Surface Pro 7 */
+    grid-template-columns: 1fr 1fr; // Mantener dos columnas en pantallas medianas
+    gap: 1.8rem; // Reducir un poco el espacio entre productos
+    padding: 1.8rem; // Ajustar padding para pantallas medianas
+  }
+
+  @media (max-width: 1024px) {
+    /* Para tablets y Surface */
+    grid-template-columns: 1fr; // En pantallas medianas, usa una columna
+    gap: 1.5rem; // Reducir el espacio entre productos
+    padding: 1.5rem; // Reducir el espaciado alrededor
+  }
+
   @media (max-width: 768px) {
-    grid-template-columns: 1fr; // Una columna en pantallas pequeñas
+    /* Para dispositivos como iPhone 12 Pro, Pixel 7, y tablets pequeños */
+    grid-template-columns: 1fr; // En pantallas más pequeñas, usa una columna
+    gap: 1.2rem; // Espacio más reducido entre productos
+    padding: 1rem; // Menos padding para aprovechar mejor el espacio
+  }
+
+  @media (max-width: 540px) {
+    /* Para dispositivos más pequeños como el iPhone SE, Galaxy S8+, y Galaxy A51 */
+    grid-template-columns: 1fr; // En dispositivos pequeños, usa una columna
+    gap: 1rem; // Reducir aún más el espacio
+    padding: 0.8rem; // Reducir el padding
+  }
+
+  @media (max-width: 480px) {
+    /* Para dispositivos muy pequeños como algunos modelos antiguos de iPhone */
+    grid-template-columns: 1fr; // En dispositivos muy pequeños, usa una columna
+    gap: 0.8rem; // Reducir aún más el espacio
+    padding: 0.8rem; // Reducir el padding
+  }
+
+  @media (max-width: 414px) {
+    /* Para dispositivos como iPhone XR y Galaxy A71 */
+    grid-template-columns: 1fr; // Una sola columna
+    gap: 1rem; // Espacio reducido entre productos
+    padding: 1rem; // Ajuste del padding
+  }
+
+  @media (max-width: 390px) {
+    /* Para iPhone 12 y dispositivos similares */
+    grid-template-columns: 1fr; // Una sola columna
+    gap: 1rem; // Espacio reducido
+    padding: 0.8rem; // Ajuste del padding
+  }
+
+  @media (max-width: 360px) {
+    /* Para dispositivos muy pequeños como iPhone SE (modelo antiguo) */
+    grid-template-columns: 1fr; // Una sola columna
+    gap: 0.7rem; // Espacio reducido
+    padding: 0.6rem; // Ajuste de padding
+  }
+
+  @media (max-width: 320px) {
+    /* Para dispositivos como iPhone 4/5 o similares */
+    grid-template-columns: 1fr; // Una sola columna
+    gap: 0.6rem; // Espacio mínimo entre productos
+    padding: 0.5rem; // Minimizar el padding
   }
 }

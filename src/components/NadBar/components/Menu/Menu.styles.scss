@@ -1,18 +1,63 @@
-.navbar-menu {
-  display: flex;
-  justify-content: space-between;
+.navbar {
+  position: relative;
+  z-index: 2; // Asegura que el contenedor principal esté en el nivel adecuado
 
-  padding: 20px;
-  color: rgb(178, 175, 175);
-  border-radius: 1rem;
+  .menu-toggle {
+    z-index: 3; // El botón "hamburguesa" siempre estará en la capa superior
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
 
-  a {
-    text-decoration: none;
-    color: rgb(178, 175, 175);
-    padding: 0.5rem 1rem;
+  .navbar-menu {
+    display: flex;
+    gap: 20px;
+    background-color: #333;
+    padding: 10px 20px;
+    align-items: center;
 
-    &:hover {
-      border-bottom: 2px solid rgb(178, 175, 175);
+    .menu-link {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #f0a500;
+      }
+    }
+  }
+
+  // Estilos para dispositivos móviles y tabletas
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+    }
+
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      gap: 15px;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      padding: 20px;
+      width: 200px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      z-index: 2; // Para asegurar que el menú aparezca sobre otros elementos
+
+      &.open {
+        display: flex;
+      }
     }
   }
 }

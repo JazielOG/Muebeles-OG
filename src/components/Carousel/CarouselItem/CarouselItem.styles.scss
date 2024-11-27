@@ -2,51 +2,133 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff; // Fondo blanco para el item
-  border-radius: 8px; // Bordes redondeados
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); // Sombra sutil
-  overflow: hidden; // Ocultar contenido que sobresale
-  transition: transform 0.3s, box-shadow 0.3s; // Transición suave para efectos
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
 
   &:hover {
-    transform: translateY(-5px); // Levantar el item al pasar el mouse
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); // Aumentar sombra al hacer hover
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   }
 
   .carousel-item-image {
-    height: 260px; // Altura fija
-    object-fit: cover; // Ajustar imagen sin distorsión
-    border-bottom: 2px solid #f0f0f0; // Separador suave
+    height: 260px;
+    object-fit: cover;
+    border-bottom: 2px solid #f0f0f0;
   }
 
   .carousel-item-info {
-    padding: 15px; // Espaciado interno
-    text-align: center; // Centramos texto
+    padding: 15px;
+    text-align: center;
   }
 
   .carousel-item-description {
-    font-size: 14px; // Tamaño de fuente para la descripción
-    color: #666; // Color de texto más suave
-    margin: 10px 0; // Espaciado vertical
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
   }
 
   .carousel-item-price {
-    font-size: 16px; // Tamaño de fuente para el precio
-    font-weight: 600; // Negrita para el precio
-    color: #333; // Color más oscuro para mayor legibilidad
-    margin: 5px 0; // Espaciado vertical
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 5px 0;
   }
 
   .carousel-item-button {
-    margin-top: 10px; // Espaciado superior para el botón
-    background-color: #007bff; // Color de fondo del botón
-    color: white; // Color del texto del botón
-    padding: 10px 15px; // Espaciado interno del botón
-    border-radius: 5px; // Bordes redondeados para el botón
-    transition: background-color 0.3s; // Transición para el cambio de color
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 
     &:hover {
-      background-color: #0056b3; // Color del botón al pasar el mouse
+      background-color: #0056b3;
     }
+  }
+}
+
+/* Dispositivos pequeños (iPhone SE, Pixel 7, etc.) */
+@media (max-width: 375px) {
+  .carousel-item {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .carousel-item-image {
+    height: 200px;
+  }
+  .carousel-item-description {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+  .carousel-item-price {
+    font-size: 14px;
+  }
+  .carousel-item-button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+
+/* Dispositivos medianos (iPhone XR, Galaxy S20 Ultra, iPad Mini, etc.) */
+@media (max-width: 414px) {
+  .carousel-item {
+    max-width: 360px;
+  }
+  .carousel-item-image {
+    height: 220px;
+  }
+  .carousel-item-description {
+    font-size: 13px;
+  }
+  .carousel-item-price {
+    font-size: 15px;
+  }
+  .carousel-item-button {
+    padding: 9px 14px;
+    font-size: 15px;
+  }
+}
+
+/* Dispositivos grandes (iPad Air, iPad Pro, Surface Pro 7, etc.) */
+@media (max-width: 768px) {
+  .carousel-item {
+    max-width: 480px;
+  }
+  .carousel-item-image {
+    height: 240px;
+  }
+  .carousel-item-description {
+    font-size: 14px;
+  }
+  .carousel-item-price {
+    font-size: 16px;
+  }
+  .carousel-item-button {
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+}
+
+/* Dispositivos muy grandes (Surface Duo, Asus Zenbook Fold, etc.) */
+@media (max-width: 1024px) {
+  .carousel-item {
+    max-width: 600px;
+  }
+  .carousel-item-image {
+    height: 260px;
+  }
+  .carousel-item-description {
+    font-size: 15px;
+  }
+  .carousel-item-price {
+    font-size: 18px;
+  }
+  .carousel-item-button {
+    padding: 12px 18px;
+    font-size: 18px;
   }
 }

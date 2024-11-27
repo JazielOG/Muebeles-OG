@@ -1,6 +1,6 @@
 import { CarouselItemProps } from "../components/Carousel/CarouselItem/CarouselItem";
 
-export const trendingCards: CarouselItemProps[] = [
+const trendingCards: CarouselItemProps[] = [
   {
     id: "17897", // ID único
     imageUrl:
@@ -98,3 +98,5 @@ export const trendingCards: CarouselItemProps[] = [
     price: 13500,
   },
 ];
+
+export { trendingCards };

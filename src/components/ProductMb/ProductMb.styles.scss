@@ -1,22 +1,20 @@
 .product-Mb {
-  display: flex; /* Disposición horizontal */
-  background-color: #ffffff; /* Fondo blanco para la tarjeta */
-  border-radius: 8px; /* Bordes redondeados */
-  overflow: hidden; /* Oculta el contenido que sobresale */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  transition: transform 0.3s ease; /* Transición suave para el efecto de hover */
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 
   &:hover {
-    transform: scale(
-      1.02
-    ); /* Aumenta ligeramente la tarjeta al pasar el mouse */
+    transform: scale(1.02);
   }
 
   &-img {
-    width: 100%; /* La imagen ocupa el 100% de la tarjeta */
-    height: 300px; /* Altura fija para mantener proporciones uniformes */
-    object-fit: cover; /* Asegura que la imagen mantenga sus proporciones */
-    transition: transform 0.3s ease; /* Transición suave para el efecto de lupa */
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
   }
 
   .product-Mb-extra {
@@ -26,40 +24,152 @@
   }
 
   &-content {
-    display: flex; /* Utiliza flexbox para alinear el contenido */
-    flex-direction: column; /* Alinea los elementos en columna */
-    justify-content: center; /* Centra verticalmente los elementos */
-    padding: 1rem; /* Espaciado interno */
-    flex-grow: 1; /* Permite que el contenido ocupe el espacio restante */
-    text-align: center; /* Centra el texto */
-    gap: 0.5rem; /* Espacio entre los elementos del contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    flex-grow: 1;
+    text-align: center;
+    gap: 0.5rem;
 
     label {
-      font-size: 1rem; /* Tamaño de fuente de la descripción */
-      color: #333; /* Color oscuro para la legibilidad */
-      text-decoration: none; /* Sin subrayado */
+      font-size: 1rem;
+      color: #333;
+      text-decoration: none;
     }
 
     .product-Mb-price {
-      font-size: 1.2rem; /* Tamaño de fuente para el precio */
-      color: #007bff; /* Color azul para destacar el precio */
-      font-weight: bold; /* Hace que el precio sea más prominente */
-      margin: 0; /* Elimina márgenes innecesarios */
+      font-size: 1.2rem;
+      color: #007bff;
+      font-weight: bold;
+      margin: 0;
     }
 
     .product-Mb-button {
-      background-color: #007bff; /* Color de fondo azul para el botón */
-      color: white; /* Color de texto blanco */
-      padding: 0.5rem 1rem; /* Espaciado interno del botón */
-      border-radius: 4px; /* Bordes redondeados para el botón */
-      text-decoration: none; /* Quita el subrayado del enlace */
-      display: flex; /* Alinea el icono del carrito y el texto */
-      align-items: center; /* Centra verticalmente el contenido */
-      justify-content: center; /* Centra horizontalmente el contenido */
+      background-color: #007bff;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &:hover {
-        background-color: #0056b3; /* Color más oscuro al hacer hover */
+        background-color: #0056b3;
       }
+    }
+  }
+
+  /* Media Queries para adaptabilidad */
+
+  @media (max-width: 1440px) {
+    /* Dispositivos grandes como el Asus Zenbook Fold */
+    &-img {
+      height: 280px;
+    }
+    .product-Mb-price {
+      font-size: 1.1rem;
+    }
+    .product-Mb-button {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.8rem;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    /* Dispositivos como iPad Pro y Surface Pro 7 */
+    &-img {
+      height: 270px;
+    }
+    .product-Mb-price {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    /* Tablets como iPad Mini, iPad Air */
+    &-img {
+      height: 250px;
+    }
+    .product-Mb-price {
+      font-size: 1rem;
+    }
+    .product-Mb-button {
+      font-size: 0.9rem;
+      padding: 0.3rem 0.7rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* Dispositivos como iPhone XR, Pixel 7, Samsung Galaxy S8+ */
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    &-img {
+      height: 220px;
+    }
+    .product-Mb-price {
+      font-size: 1rem;
+    }
+    .product-Mb-button {
+      font-size: 0.9rem;
+      padding: 0.3rem 0.6rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    /* Para dispositivos como iPhone 12 Pro, Samsung Galaxy A51 */
+    &-img {
+      height: 200px;
+    }
+    .product-Mb-price {
+      font-size: 0.9rem;
+    }
+    .product-Mb-button {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.5rem;
+    }
+  }
+
+  @media (max-width: 540px) {
+    /* Para dispositivos más pequeños como iPhone SE, Galaxy Z Fold 5 */
+    &-img {
+      height: 180px;
+    }
+    .product-Mb-price {
+      font-size: 0.85rem;
+    }
+    .product-Mb-button {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.5rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    /* Para dispositivos como el Nest Hub y Nest Hub Max */
+    flex-direction: column;
+    &-img {
+      height: 160px;
+    }
+    .product-Mb-price {
+      font-size: 0.8rem;
+    }
+    .product-Mb-button {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.4rem;
+    }
+  }
+
+  @media (max-width: 375px) {
+    /* Para dispositivos de pantallas extremadamente pequeñas */
+    &-img {
+      height: 150px;
+    }
+    .product-Mb-price {
+      font-size: 0.8rem;
+    }
+    .product-Mb-button {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.4rem;
     }
   }
 }

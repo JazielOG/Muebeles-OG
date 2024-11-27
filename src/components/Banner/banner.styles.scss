@@ -1,0 +1,321 @@
+.banner {
+  background-color: #f2f2f2; /* Fondo suave */
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.banner h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.banner button {
+  background-color: #007bff; /* Azul brillante */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.banner button:hover {
+  background-color: #0056b3; /* Azul oscuro al pasar el cursor */
+}
+
+/* Media Queries para dispositivos específicos */
+
+/* iPhone SE, iPhone 5/5S */
+@media (max-width: 375px) {
+  .banner {
+    max-width: 300px;
+    padding: 15px;
+  }
+
+  .banner h1 {
+    font-size: 20px;
+  }
+
+  .banner button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* iPhone XR, iPhone 11 */
+@media (max-width: 414px) {
+  .banner {
+    max-width: 320px;
+    padding: 18px;
+  }
+
+  .banner h1 {
+    font-size: 22px;
+  }
+
+  .banner button {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+}
+
+/* iPhone 12 Pro, iPhone 13 Pro */
+@media (max-width: 430px) {
+  .banner {
+    max-width: 340px;
+    padding: 18px;
+  }
+
+  .banner h1 {
+    font-size: 22px;
+  }
+
+  .banner button {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+}
+
+/* iPhone 14 Pro Max */
+@media (max-width: 430px) {
+  .banner {
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  .banner h1 {
+    font-size: 24px;
+  }
+
+  .banner button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Google Pixel 7 */
+@media (max-width: 412px) {
+  .banner {
+    max-width: 320px;
+    padding: 18px;
+  }
+
+  .banner h1 {
+    font-size: 22px;
+  }
+
+  .banner button {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+}
+
+/* Samsung Galaxy S8+ */
+@media (max-width: 412px) {
+  .banner {
+    max-width: 320px;
+    padding: 18px;
+  }
+
+  .banner h1 {
+    font-size: 22px;
+  }
+
+  .banner button {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+}
+
+/* Samsung Galaxy S20 Ultra */
+@media (max-width: 430px) {
+  .banner {
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  .banner h1 {
+    font-size: 24px;
+  }
+
+  .banner button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* iPad Mini, iPad Air */
+@media (max-width: 768px) {
+  .banner {
+    max-width: 350px;
+    padding: 18px;
+  }
+
+  .banner h1 {
+    font-size: 22px;
+  }
+
+  .banner button {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+}
+
+/* iPad Pro */
+@media (max-width: 1024px) {
+  .banner {
+    max-width: 380px;
+    padding: 20px;
+  }
+
+  .banner h1 {
+    font-size: 24px;
+  }
+
+  .banner button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Surface Pro 7 */
+@media (max-width: 1280px) {
+  .banner {
+    max-width: 400px;
+    padding: 20px;
+  }
+
+  .banner h1 {
+    font-size: 24px;
+  }
+
+  .banner button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Surface Duo */
+@media (max-width: 540px) {
+  .banner {
+    max-width: 360px;
+    padding: 18px;
+  }
+
+  .banner h1 {
+    font-size: 22px;
+  }
+
+  .banner button {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+}
+
+/* Galaxy Z Fold 5 */
+@media (max-width: 600px) {
+  .banner {
+    max-width: 380px;
+    padding: 20px;
+  }
+
+  .banner h1 {
+    font-size: 24px;
+  }
+
+  .banner button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+/* Asus Zenbook Fold */
+@media (max-width: 768px) {
+  .banner {
+    max-width: 350px;
+    padding: 20px;
+  }
+
+  .banner h1 {
+    font-size: 22px;
+  }
+
+  .banner button {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+}
+
+/* Samsung Galaxy A51 */
+@media (max-width: 412px) {
+  .banner {
+    max-width: 320px;
+    padding: 18px;
+  }
+
+  .banner h1 {
+    font-size: 22px;
+  }
+
+  .banner button {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+}
+
+/* Samsung Galaxy A71 */
+@media (max-width: 412px) {
+  .banner {
+    max-width: 320px;
+    padding: 18px;
+  }
+
+  .banner h1 {
+    font-size: 22px;
+  }
+
+  .banner button {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+}
+
+/* Nest Hub */
+@media (max-width: 640px) {
+  .banner {
+    max-width: 300px;
+    padding: 15px;
+  }
+
+  .banner h1 {
+    font-size: 20px;
+  }
+
+  .banner button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Nest Hub Max */
+@media (max-width: 1024px) {
+  .banner {
+    max-width: 380px;
+    padding: 20px;
+  }
+
+  .banner h1 {
+    font-size: 24px;
+  }
+
+  .banner button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}

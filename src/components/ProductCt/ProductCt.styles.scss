@@ -74,4 +74,128 @@
       }
     }
   }
+
+  // Media queries para cada uno de los dispositivos mencionados
+
+  @media (max-width: 375px) {
+    /* iPhone SE */
+    max-width: 100%;
+    margin: 0 auto;
+    &-img {
+      height: 250px;
+    }
+    &-footer {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  }
+
+  @media (max-width: 414px) {
+    /* iPhone XR, Pixel 7, Samsung Galaxy A51 */
+    max-width: 100%;
+    margin: 0 auto;
+    &-img {
+      height: 280px;
+    }
+    &-footer {
+      font-size: 1.1rem;
+      padding: 1.2rem;
+    }
+  }
+
+  @media (max-width: 390px) {
+    /* iPhone 12 Pro */
+    max-width: 100%;
+    margin: 0 auto;
+    &-img {
+      height: 300px;
+    }
+    &-footer {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 430px) {
+    /* iPhone 14 Pro Max */
+    max-width: 100%;
+    margin: 0 auto;
+    &-img {
+      height: 320px;
+    }
+    &-footer {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media (max-width: 540px) {
+    /* Samsung Galaxy S8+, Galaxy Z Fold 5 */
+    max-width: 100%;
+    margin: 0 auto;
+    &-img {
+      height: 340px;
+    }
+    &-footer {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    /* Samsung Galaxy S20 Ultra, Galaxy A71 */
+    max-width: 100%;
+    margin: 0 auto;
+    &-img {
+      height: 350px;
+    }
+    &-footer {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* iPad Mini, iPad Air, Pixel 7 */
+    max-width: 100%;
+    margin: 0 auto;
+    &-img {
+      height: 360px;
+    }
+    &-footer {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 820px) {
+    /* iPad Pro, Surface Pro 7 */
+    max-width: 100%;
+    margin: 0 auto;
+    &-img {
+      height: 380px;
+    }
+    &-footer {
+      font-size: 1.3rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    /* Asus Zenbook Fold */
+    max-width: 100%;
+    margin: 0 auto;
+    &-img {
+      height: 400px;
+    }
+    &-footer {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    /* Nest Hub, Nest Hub Max */
+    max-width: 100%;
+    margin: 0 auto;
+    &-img {
+      height: 420px;
+    }
+    &-footer {
+      font-size: 1.5rem;
+    }
+  }
 }

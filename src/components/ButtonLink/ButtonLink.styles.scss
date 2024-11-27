@@ -39,3 +39,53 @@
     ); // Mueve el ícono hacia la derecha al hacer hover
   }
 }
+
+/* Media Queries para adaptabilidad */
+
+/* Dispositivos pequeños (iPhone SE, Pixel 7, Galaxy S8+) */
+@media (max-width: 375px) {
+  .button-link {
+    padding: 4px 16px; // Reducir padding para pantallas más pequeñas
+    font-size: 0.875rem; // Reducir tamaño de fuente
+  }
+
+  svg {
+    font-size: 1rem; // Ajustar tamaño del ícono
+  }
+}
+
+/* Dispositivos medianos (iPhone XR, Galaxy S20 Ultra, iPad Mini) */
+@media (max-width: 414px) {
+  .button-link {
+    padding: 5px 18px; // Ajustar padding para dispositivos medianos
+    font-size: 0.95rem; // Reducir ligeramente tamaño de fuente
+  }
+
+  svg {
+    font-size: 1.1rem; // Ajustar tamaño del ícono
+  }
+}
+
+/* Dispositivos grandes (iPad Pro, Surface Pro, etc.) */
+@media (max-width: 1024px) {
+  .button-link {
+    padding: 6px 20px; // Padding adecuado para tabletas
+    font-size: 1rem; // Fuente tamaño normal
+  }
+
+  svg {
+    font-size: 1.2rem; // Ícono con tamaño estándar
+  }
+}
+
+/* Dispositivos muy grandes (pantallas de escritorio grandes) */
+@media (min-width: 1200px) {
+  .button-link {
+    padding: 8px 24px; // Ampliar padding para pantallas más grandes
+    font-size: 1.1rem; // Aumentar tamaño de la fuente
+  }
+
+  svg {
+    font-size: 1.4rem; // Aumentar tamaño del ícono
+  }
+}
