@@ -1,18 +1,9 @@
-import { Hero } from "../../../components/Hero/Hero";
 import { Catalog } from "../../../components/Catalog/Catalog";
 import { catalogCar } from "../../../data/catalog";
-
-const heroCochesPage = {
-  imageUrl:
-    "https://cloudfront.dico.com.mx/media/Estilos/LandingIndustrialCentro_02.jpg",
-  imageText: "Muebles Ortega",
-  headline: "OG.",
-};
 
 const CochesPage = () => {
   return (
     <>
-      <Hero {...heroCochesPage} />
       <Catalog productList={catalogCar} />
 
       <img

@@ -8,6 +8,7 @@ import { BedroomsPage } from "../pages/bedrooms/bedrooms";
 import { StovePage } from "../pages/stove/stove";
 import { LivingPage } from "../pages/living/living";
 import { DiningPage } from "../pages/dining/dining";
+import { FavoritesPage } from "../pages/Favorites/Favorites";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: "checkout",
     element: <Checkout />,
+  },
+  {
+    path: "favorites",
+    element: <FavoritesPage />,
   },
   {
     path: "*",

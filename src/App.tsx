@@ -7,8 +7,11 @@ import { ShoppingCardContext } from "./providers/ShoppingCardContext";
 import { useEffect, useState } from "react";
 import { getFromLocalStorage } from "./utils/localStorage";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
+import { FavoritesContext } from "./providers/FavoritesContext";
 
 const PRODUCT_LIST_KEY = "PRODUCT_LIST_KEY";
+const FAVORITES_LIST_KEY = "FAVORITES_LIST_KEY";
+
 const ppIntialOptions = {
   clientId: "test",
   currency: "MXN",
@@ -17,11 +20,16 @@ const ppIntialOptions = {
 
 function App() {
   const [productList, setProductList] = useState([]);
+  const [favoritesList, setFavoritesList] = useState([]);
 
   useEffect(() => {
     const result = getFromLocalStorage(PRODUCT_LIST_KEY);
     if (result) {
       setProductList(result);
+    }
+    const favorites = getFromLocalStorage(FAVORITES_LIST_KEY);
+    if (favorites) {
+      setFavoritesList(favorites);
     }
   }, []);
 
@@ -33,11 +41,18 @@ function App() {
           setProductList,
         }}
       >
-        <div className="app">
-          <NavBar />
-          <RouterProvider router={router} />
-          <Footer year={0} companyName={""} />
-        </div>
+        <FavoritesContext.Provider
+          value={{
+            favoritesList,
+            setFavoritesList,
+          }}
+        >
+          <div className="app">
+            <NavBar />
+            <RouterProvider router={router} />
+            <Footer year={0} companyName={""} />
+          </div>
+        </FavoritesContext.Provider>
       </ShoppingCardContext.Provider>
     </PayPalScriptProvider>
   );

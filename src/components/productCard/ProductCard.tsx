@@ -30,11 +30,6 @@ const ProductCard: FC<ProductCardProps> = ({
         <p>
           <label className="product-card-price">$MXN {price}</label>
         </p>
-        <ButtonLink
-          href=""
-          className="product-card-button"
-          iconAfter={() => <FaShoppingCart />}
-        />
       </div>
     </a>
   );
