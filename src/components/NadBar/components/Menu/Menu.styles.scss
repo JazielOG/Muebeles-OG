@@ -32,17 +32,17 @@
     }
   }
 
-  // Estilos para dispositivos móviles y tabletas
+  // Estilos para tabletas y móviles
   @media (max-width: 768px) {
     .menu-toggle {
-      display: block;
+      display: block; // Botón hamburguesa visible
       position: absolute;
       top: 15px;
       right: 20px;
     }
 
     .navbar-menu {
-      display: none;
+      display: none; // Ocultar menú por defecto
       flex-direction: column;
       gap: 15px;
       position: absolute;
@@ -50,14 +50,29 @@
       right: 0;
       background-color: #333;
       padding: 20px;
-      width: 200px;
+      width: 250px;
       border-radius: 5px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      z-index: 2; // Para asegurar que el menú aparezca sobre otros elementos
+      z-index: 2; // Asegurar que se muestre sobre otros elementos
 
       &.open {
-        display: flex;
+        display: flex; // Mostrar menú desplegado
       }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .navbar-menu {
+      width: 200px; // Ajustar tamaño del menú para pantallas más pequeñas
+      gap: 10px;
+
+      .menu-link {
+        font-size: 14px; // Reducir tamaño de texto en móviles
+      }
+    }
+
+    .menu-toggle {
+      font-size: 20px; // Ajustar tamaño del botón hamburguesa
     }
   }
 }

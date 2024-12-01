@@ -29,6 +29,9 @@ const Menu = () => {
         <a href="/dining" className="menu-link">
           Comedores
         </a>
+        <a href="/map" className="menu-link">
+          Conocenos M OG
+        </a>
       </div>
     </div>
   );

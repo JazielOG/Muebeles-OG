@@ -3,6 +3,7 @@ import { ProductCardProps } from "../../components/productCard/ProductCard";
 import { setToLocalStorage } from "../../utils/localStorage";
 import { FavoritesContext } from "../../providers/FavoritesContext";
 import Button from "../../components/Button/Button";
+import "./Favorites.styles.scss";
 
 const FAVORITES_LIST_KEY = "FAVORITES_LIST_KEY";
 
@@ -10,24 +11,21 @@ const FavoritesPage = () => {
   const { favoritesList, setFavoritesList } = useContext(FavoritesContext);
 
   const handleClick = (id: string) => {
-    // id selecciando
-    // Cuando el usuario de click, se ejecuta esta función
-    // Usamos filter, porque queremos eliminar un elemento de la lista
-    const result = favoritesList.filter((product: ProductCardProps) => {
-      return product.id !== id; // Regresamos todos los products que cumplan esta condición
-    });
+    const result = favoritesList.filter(
+      (product: ProductCardProps) => product.id !== id
+    );
     setFavoritesList(result);
     setToLocalStorage(FAVORITES_LIST_KEY, result);
   };
 
   return (
-    <div>
+    <div className="favorites-page">
       <h1>Favoritos</h1>
-      {favoritesList.map((product: ProductCardProps) => {
-        return (
-          <div className="shopping-cart-page-product">
+      <div className="favorites-list">
+        {favoritesList.map((product: ProductCardProps) => (
+          <div className="shopping-cart-page-product" key={product.id}>
             <div className="shopping-cart-page-product-image">
-              <img src={product.imagesUrl[0]} alt="" />
+              <img src={product.imagesUrl[0]} alt={product.description} />
             </div>
             <div className="shopping-cart-page-product-desc">
               <div>{product.description}</div>
@@ -42,8 +40,8 @@ const FavoritesPage = () => {
               className="dark"
             />
           </div>
-        );
-      })}
+        ))}
+      </div>
     </div>
   );
 };

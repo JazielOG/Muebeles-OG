@@ -1,13 +1,14 @@
+// CarouselItem.tsx
 import { FC } from "react";
 import { Tag } from "../../Tag/Tag";
 import { ButtonLink } from "../../ButtonLink/ButtonLink";
-import { FaShoppingCart } from "react-icons/fa"; // Importa el ícono del carrito
+import { FaShoppingCart } from "react-icons/fa"; // Ícono del carrito
 
 import "./CarouselItem.styles.scss";
 
 export interface CarouselItemProps {
   id: string;
-  imageUrl: string; // Asegúrate de que sea un string
+  imagesUrl: string[];
   description: string;
   price: number;
   title: string;
@@ -15,26 +16,26 @@ export interface CarouselItemProps {
 }
 
 const CarouselItem: FC<CarouselItemProps> = ({
-  id, // Añadido para usarlo en ButtonLink
-  imageUrl,
+  id,
+  imagesUrl,
   title,
   description,
   price,
 }) => {
   return (
-    <div className="carousel-item">
-      <img className="carousel-item-image" src={imageUrl} alt={title} />
+    <a className="carousel-item" href={`/product/${id}`}>
+      <img className="carousel-item-image" src={imagesUrl[0]} alt={title} />
       <div className="carousel-item-info">
         <Tag color="black" backgroundColor="white" label={title} />
         <p className="carousel-item-description">{description}</p>
         <p className="carousel-item-price">$MXN {price}</p>
         <ButtonLink
-          href=""
+          href={`/cart/${id}`} // Redirige al carrito con el ID del producto
           className="carousel-item-button"
           iconAfter={() => <FaShoppingCart />}
-        />
+        ></ButtonLink>
       </div>
-    </div>
+    </a>
   );
 };
 

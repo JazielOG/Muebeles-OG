@@ -16,10 +16,10 @@ const ThirdCarousel: FC<ThirdCarouselProps> = ({ title, items }) => {
     <div className="third-carousel">
       <h2 className="carousel-title">{title}</h2>
       <div className="carousel-items-container">
-        {items.map(({ imageUrl, title }, index) => (
+        {items.map(({ imagesUrl, title }, index) => (
           <CarouselItem
             key={index}
-            imageUrl={imageUrl}
+            imagesUrl={imagesUrl}
             title={title}
             id={""}
             description={""}

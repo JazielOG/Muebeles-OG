@@ -9,6 +9,7 @@ import { StovePage } from "../pages/stove/stove";
 import { LivingPage } from "../pages/living/living";
 import { DiningPage } from "../pages/dining/dining";
 import { FavoritesPage } from "../pages/Favorites/Favorites";
+import { MapPage } from "../pages/mapa/map";
 
 const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
   {
     path: "favorites",
     element: <FavoritesPage />,
+  },
+  {
+    path: "map",
+    element: <MapPage />,
   },
   {
     path: "*",

@@ -89,11 +89,9 @@ const ShoppingCartPage = () => {
         })}
         <div className="shopping-cart-page-total">
           <div>Total: ${total}</div>
-          <ButtonLink
-            href="checkout"
-            label="proceder al pago"
-            className="dark"
-          />
+          <ButtonLink href="checkout" className="dark">
+            proceder al pago {/* Cambia label por children */}
+          </ButtonLink>
         </div>
       </div>
     </div>

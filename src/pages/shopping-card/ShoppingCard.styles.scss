@@ -9,7 +9,7 @@ $shadow-color: rgba(0, 0, 0, 0.1); // Sombra sutil
   padding: 2rem;
   background-color: $secondary-color;
   border-radius: 8px;
-  box-shadow: 0 4px 8px $shadow-color;
+  box-shadow: 0 4px 8px $shadow-color, 0 2px 4px rgba(0, 0, 0, 0.05);
   max-width: 900px;
   margin: 0 auto;
 
@@ -32,15 +32,16 @@ $shadow-color: rgba(0, 0, 0, 0.1); // Sombra sutil
       padding: 1rem;
       border: 1px solid $border-color;
       border-radius: 5px;
-      box-shadow: 0 2px 4px $shadow-color;
+      box-shadow: 0 2px 4px $shadow-color, 0 1px 2px rgba(0, 0, 0, 0.05);
       transition: box-shadow 0.3s;
 
       &:hover {
-        box-shadow: 0 4px 8px $shadow-color;
+        box-shadow: 0 4px 8px $shadow-color, 0 2px 4px rgba(0, 0, 0, 0.05);
       }
 
       &-image {
         flex-shrink: 0;
+
         img {
           width: 80px;
           height: 80px;
@@ -77,7 +78,7 @@ $shadow-color: rgba(0, 0, 0, 0.1); // Sombra sutil
           transition: background-color 0.3s;
 
           &:hover {
-            background-color: darken($accent-color, 10%);
+            background-color: #8d8b89; // Ajuste para mejor contraste
           }
         }
       }
@@ -107,6 +108,34 @@ $shadow-color: rgba(0, 0, 0, 0.1); // Sombra sutil
       label {
         margin-right: 1rem;
       }
+      button.dark,
+      a.dark {
+        background-color: #333; // Fondo oscuro
+        color: #fff; // Texto blanco
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 0.8rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        text-decoration: none; // Eliminar subrayado en enlaces
+        display: inline-block;
+        text-align: center;
+        transition: background-color 0.3s ease, transform 0.3s ease,
+          box-shadow 0.3s ease;
+        text-transform: uppercase; // Transforma el texto en mayúsculas
+
+        &:hover {
+          background-color: #555; // Fondo más claro cuando se pasa el mouse
+          transform: translateY(-2px); // Efecto de elevación al pasar el mouse
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); // Sombra sutil al hacer hover
+        }
+
+        &:active {
+          background-color: #444; // Fondo aún más oscuro al hacer clic
+          transform: translateY(0); // El botón vuelve a su posición original
+        }
+      }
 
       .dark {
         background-color: $accent-color;
@@ -118,7 +147,37 @@ $shadow-color: rgba(0, 0, 0, 0.1); // Sombra sutil
         transition: background-color 0.3s;
 
         &:hover {
-          background-color: darken($accent-color, 10%);
+          background-color: #8d8b89; // Ajuste para mejor contraste
+        }
+      }
+    }
+  }
+
+  // Estilos responsivos para pantallas pequeñas
+  @media (max-width: 768px) {
+    .shopping-cart-page {
+      padding: 1rem;
+
+      .shopping-cart-page-list {
+        gap: 1rem;
+
+        .shopping-cart-page-product {
+          flex-direction: column;
+          align-items: flex-start;
+
+          &-image {
+            margin-bottom: 1rem;
+          }
+
+          &-desc {
+            margin-left: 0;
+            align-items: flex-start;
+          }
+
+          &-price,
+          &-total {
+            text-align: left;
+          }
         }
       }
     }
